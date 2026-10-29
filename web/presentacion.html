@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="es" data-repo="https://github.com/jorgeavillegas/despacho-pessoa-estudiantes">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Despacho Pessoa · Abogar con IA</title>
+<meta name="description" content="Presentación de la conferencia Despacho Pessoa: un método con cadena de custodia para usar inteligencia artificial en un despacho jurídico. Cinco agentes, siete reglas, un humano que firma.">
+<meta property="og:title" content="Despacho Pessoa · Abogar con IA">
+<meta property="og:description" content="Cinco agentes, siete reglas, una biblioteca cerrada y un humano que firma.">
+<meta property="og:image" content="assets/img/despacho.jpg">
+<link rel="stylesheet" href="assets/presentacion.css">
+</head>
+<body>
+
+<div class="grid" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<div class="topbar">
+  <span><b>Semana del Derecho</b> · Universidad Autónoma de Occidente · viernes 30 de octubre de 2026 · 8:00 a 11:00 a. m. · Salón 2102 y Webex ↗</span>
+  <button class="x" type="button" aria-label="Cerrar aviso">×</button>
+</div>
+
+<nav class="nav" aria-label="Partes de la presentación">
+  <a class="logo" href="#inicio">
+    <svg viewBox="0 0 27 27" aria-hidden="true">
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0a458"/><stop offset=".5" stop-color="#c96a3b"/><stop offset="1" stop-color="#7d2a2a"/></linearGradient></defs>
+      <path d="M22 4.5H7.5A3 3 0 0 0 4.5 7.5v12a3 3 0 0 0 3 3H22" fill="none" stroke="url(#lg)" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="11" cy="13.5" r="1.7" fill="#141414"/><circle cx="17" cy="13.5" r="1.7" fill="#141414"/>
+    </svg>
+    <span>Despacho Pessoa</span>
+  </a>
+  <div class="menu m11">
+    <a href="#inicio" data-parte="Inicio">Inicio</a>
+    <a href="#puestos" data-parte="El despacho">Despacho</a>
+    <a href="#cifras" data-parte="El problema">Problema</a>
+    <a href="#pessoa" data-parte="Los agentes">Agentes</a>
+    <a href="#estatuto" data-parte="Las reglas">Reglas</a>
+    <a href="#demo-permiso" data-parte="Demostración">Demo</a>
+    <a href="#version-publica" data-parte="Taller">Taller</a>
+    <a href="#balance" data-parte="Cierre">Cierre</a>
+  </div>
+  <div class="pad m11"><a href="#" data-repo="">Repositorio ↗</a></div>
+  <div class="cta"><a class="btn-outline" href="index.html">•• Abrir el despacho</a></div>
+</nav>
+
+<aside class="rail" aria-label="Posición en la presentación">
+  <div class="dots" role="group" aria-label="Secciones"></div>
+  <div class="label"><i class="dial"></i><span>Inicio</span></div>
+  <button class="menu-btn" type="button" data-abrir-indice>≡ Índice</button>
+</aside>
+<div class="progress" aria-hidden="true"></div>
+
+<div id="indice" class="indice" role="dialog" aria-label="Índice de la presentación">
+  <div class="caja">
+    <button class="cerrar" type="button" data-cerrar-indice>Cerrar · Esc</button>
+    <h2>Índice</h2>
+    <ol></ol>
+    <p class="m11 dim" style="margin:16px 0 0">Teclas: flechas o espacio para avanzar · Inicio y Fin · F pantalla completa · I este índice</p>
+  </div>
+</div>
+
+<main>
+
+<!-- ========== INICIO ========== -->
+<section class="slide" id="inicio" data-parte="Inicio" data-titulo="Portada">
+  <div class="inner">
+    <div class="hero-prompt rv">
+      <div class="tab" aria-hidden="true">“</div>
+      <div class="box frame"><i class="c"></i>
+        <div class="m11"><span data-typed='["@01-observador-caeiro Lee la entrevista y escribe los hechos. Lo que no conste, márcalo NO CONSTA.","@02-investigador-search Busca en fuentes/ y arma las fichas de cita. Nada de memoria.","@03-redactor-reis Redacta el borrador solo con los hechos y las fichas.","@04-verificador-soares Coteja cada cita contra el corpus. No reescribas nada.","@05-diablo-campos Ataca el borrador como lo haría el juez."]'></span><span class="caret" aria-hidden="true"></span></div>
+      </div>
+      <div class="next m11" data-typed-next aria-hidden="true"></div>
+    </div>
+    <div class="hero-rule" aria-hidden="true"></div>
+    <div class="hero-list m11 rv d2" aria-hidden="true">
+      <div>Cinco agentes</div>
+      <div>Siete reglas</div>
+      <div>Una biblioteca sellada</div>
+      <div class="dim">Un humano que firma</div>
+    </div>
+    <figure class="hero-fig frame rv d3"><i class="c"></i>
+      <img src="assets/img/despacho.jpg" alt="Ilustración a tinta de una oficina de los años treinta: cinco escritorios en fila junto a ventanales y un expediente atado con cinta que pasa de mesa en mesa hasta una silla vacía con un sello.">
+      <figcaption class="m11 dim">El despacho · cinco mesas, un expediente, una silla que firma</figcaption>
+    </figure>
+    <div class="hero-head rv d4">
+      <div class="kick m12">Semana del Derecho · UAO · 30 de octubre de 2026</div>
+      <h1><span class="g1">Despacho</span><br><span class="g2">Pessoa</span></h1>
+    </div>
+    <p class="hero-sub rv d5"><b>Abogar con IA: un método con cadena de custodia.</b> Cinco agentes, siete reglas y un humano que firma. Jorge Alberto Villegas.</p>
+    <div class="hero-bottom-rule" aria-hidden="true"></div>
+    <a class="scroll-link m11" href="#recorrido"><span>Scroll</span><span class="arr frame"><svg width="10" height="12" viewBox="0 0 10 12" aria-hidden="true"><path d="M5 0v10M1 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span></a>
+  </div>
+</section>
+
+<section class="slide" id="recorrido" data-parte="Inicio" data-titulo="Cuatro partes, una idea">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Apertura</span></div>
+    <h2 class="rv">Cuatro partes, una idea</h2>
+    <p class="sub rv">No venimos a ver magia. Venimos a ver un método para que un despacho use inteligencia artificial sin dejar de verificar.</p>
+    <div class="cards c4 rv">
+      <div class="card"><div class="n">01</div><h3>Cómo piensa un despacho</h3><p>Puestos, hechos, pruebas, plazos y responsabilidad.</p></div>
+      <div class="card"><div class="n">02</div><h3>El problema</h3><p>La alucinación no desaparece: se mueve de sitio.</p></div>
+      <div class="card"><div class="n">03</div><h3>Construimos el nuestro</h3><p>Cinco agentes, siete reglas y una biblioteca cerrada.</p></div>
+      <div class="card"><div class="n">04</div><h3>Lo pruebas tú</h3><p>Creas un caso, llenas la entrada y lanzas al Observador.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">No prometemos cero alucinaciones. Prometemos un sistema que hace visible el error y devuelve la decisión a una persona.</p>
+      <div class="tags"><span>Método, no magia</span><span>Permiso, no promesa</span><span>El humano firma</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EL DESPACHO ========== -->
+<section class="slide" id="puestos" data-parte="El despacho" data-titulo="Un despacho no es una persona muy inteligente">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Cómo piensa un despacho</span></div>
+    <h2 class="rv">Un despacho no es una persona muy inteligente</h2>
+    <p class="sub rv">Es un conjunto de puestos con límites, y alguien que revisa lo que sale de cada uno.</p>
+    <div class="puestos rv">
+      <div class="puesto"><div class="n">1</div><h3>Recepción</h3><p>Escucha, separa los hechos de las opiniones y pide los documentos.</p></div>
+      <div class="puesto"><div class="n">2</div><h3>Investigación</h3><p>Busca normas y jurisprudencia. No redacta.</p></div>
+      <div class="puesto"><div class="n">3</div><h3>Redacción</h3><p>Escribe con los hechos y las fichas. No investiga.</p></div>
+      <div class="puesto"><div class="n">4</div><h3>Verificación</h3><p>Coteja citas y fechas. No reescribe.</p></div>
+      <div class="puesto"><div class="n">5</div><h3>Contraparte</h3><p>Ataca el borrador como lo haría el juez.</p></div>
+      <div class="puesto humano"><div class="n">6</div><h3>Socio Director</h3><p>Decide, corrige y firma.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">La calidad no depende de que una sola persona lo haga todo bien. Depende de que cada puesto tenga un límite y de que alguien revise. Esa idea es la que vamos a traducir a agentes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="anatomia" data-parte="El despacho" data-titulo="Todo caso tiene la misma anatomía">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Cómo piensa un despacho</span></div>
+    <h2 class="rv">Todo caso tiene la misma anatomía</h2>
+    <p class="sub rv">Si falta una pieza, el escrito se cae por ahí.</p>
+    <div class="cards c6 rv">
+      <div class="card"><div class="n">01</div><h3>Partes</h3><p>Quién pide y contra quién.</p></div>
+      <div class="card"><div class="n">02</div><h3>Hechos</h3><p>Qué pasó, cuándo y cómo.</p></div>
+      <div class="card"><div class="n">03</div><h3>Pruebas</h3><p>Qué lo sostiene.</p></div>
+      <div class="card"><div class="n">04</div><h3>Plazos</h3><p>Cuándo vence.</p></div>
+      <div class="card"><div class="n">05</div><h3>Pretensiones</h3><p>Qué se pide.</p></div>
+      <div class="card"><div class="n">06</div><h3>Fundamentos</h3><p>Por qué procede.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">La pregunta que ordena todo el taller: <strong>¿qué está probado y qué solo se dice?</strong> Un caso no es un relato. Es una estructura de afirmaciones, pruebas y decisiones.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="ocho-pasos" data-parte="El despacho" data-titulo="El proceso, en ocho pasos">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Cómo piensa un despacho</span></div>
+    <div class="carousel rv" aria-label="Los ocho pasos del proceso">
+      <div class="strip">
+        <div class="tab"><span class="num">01</span><span class="lab">Entrevista<small>Escuchar y separar</small></span></div>
+        <div class="tab"><span class="num">02</span><span class="lab">Hechos<small>Matriz y NO CONSTA</small></span></div>
+        <div class="tab"><span class="num">03</span><span class="lab">Pruebas<small>Inventario y trazabilidad</small></span></div>
+        <div class="tab"><span class="num">04</span><span class="lab">Investigación<small>Corpus cerrado</small></span></div>
+        <div class="tab"><span class="num">05</span><span class="lab">Fichas<small>Cita literal, con ruta</small></span></div>
+        <div class="tab"><span class="num">06</span><span class="lab">Borrador<small>Solo con lo anterior</small></span></div>
+        <div class="tab"><span class="num">07</span><span class="lab">Verificación<small>Cotejo cita por cita</small></span></div>
+        <div class="tab"><span class="num">08</span><span class="lab">Decisión<small>Tú decides y firmas</small></span></div>
+        <div class="tab"><span class="num">01</span><span class="lab">Entrevista<small>Escuchar y separar</small></span></div>
+      </div>
+    </div>
+    <div class="rv" style="margin-top:auto;padding-top:40px">
+      <div class="m11 dim" style="margin-bottom:12px">··</div>
+      <p class="big-h"><span class="headline-box">El proceso,</span><br>en ocho pasos</p>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Del relato del cliente a la firma del socio. Cada paso tiene un archivo y un responsable; no se salta ninguno. La decisión final no es un paso técnico: es un acto humano.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="caso" data-parte="El despacho" data-titulo="El cliente dice. El expediente prueba.">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Cómo piensa un despacho</span></div>
+    <h2 class="rv">El cliente dice. El expediente prueba.</h2>
+    <p class="sub rv">Carmen Rosa Gómez, 68 años, suministros en salud. Todos los datos son ficticios.</p>
+    <div class="dice rv">
+      <div class="h">Lo que dice Carmen Rosa</div><div class="h">Lo que muestra el expediente</div>
+      <div><q>La EPS me debe pañales, crema, silla y enfermera.</q></div>
+      <div class="m">La prueba <code>P-03</code> solo prescribe pañales. La <code>P-02</code> acredita el eritema. Del resto no hay orden médica.</div>
+      <div><q>Envié un correo el 5 de octubre.</q></div>
+      <div class="m">No hay copia del correo ni respuesta del gerente. <code>NO CONSTA</code>.</div>
+      <div><q>La sentencia T-999 de 2024 ordena pagar cincuenta millones.</q></div>
+      <div class="m">No está en la biblioteca del despacho. Se declara <code>FUERA DEL CORPUS</code> y no se cita.</div>
+      <div><q>La petición ya venció.</q></div>
+      <div class="m">Radicada el viernes 25 de septiembre de 2026. La calculadora fija el vencimiento el lunes 19 de octubre, con el festivo del 12 en medio. Que haya vencido depende de la fecha de corte, no de la memoria.</div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">¿Qué está probado, qué no consta y qué contradice una prueba? Un hecho no es verdadero porque lo repita el cliente, ni porque lo repita el modelo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EL PROBLEMA ========== -->
+<section class="slide" id="cifras" data-parte="El problema" data-titulo="La alucinación no desaparece: se mueve">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">El problema</span></div>
+    <h2 class="rv">La alucinación no desaparece: se mueve</h2>
+    <p class="sub rv">Los modelos generales inventan. Las herramientas con recuperación de documentos fallan de otra manera.</p>
+    <div class="stats rv">
+      <div class="stat"><div class="big g">58–88%</div><h3>Modelos generales</h3><p>Tasa de alucinación en preguntas legales verificables.</p></div>
+      <div class="stat"><div class="big g">17–33%</div><h3>Herramientas con recuperación</h3><p>Bajan la invención, pero no eliminan el error.</p></div>
+      <div class="stat"><div class="big">0</div><h3>Modelos libres de error</h3><p>No existe un modelo jurídico sin alucinaciones. Existe la verificación.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Los errores que quedan son más peligrosos: una cita real atribuida a la norma equivocada. El problema no es solo que invente. Es que suena seguro.</p>
+      <span class="cite">Dahl, Magesh, Suzgun y Ho (2024); Magesh y otros (2025).</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="colombia" data-parte="El problema" data-titulo="En Colombia la Corte ya se hizo la pregunta">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">El problema</span></div>
+    <h2 class="rv">En Colombia la Corte ya se hizo la pregunta</h2>
+    <p class="sub rv">No es un debate lejano. La Corte Constitucional revisó un fallo escrito con ayuda de un chatbot.</p>
+    <div class="cards c3 rv">
+      <div class="card"><div class="n">T-323 de 2024</div><h3>Un juez consultó ChatGPT para sustanciar su sentencia</h3><p>El juez declaró que la decisión seguía siendo suya, que había corroborado la información y que quería ser transparente sobre su origen. La Corte lo citó a declarar y preguntó a entidades, colegios de jueces y facultades de ingeniería si existían protocolos para usar estas herramientas.</p></div>
+      <div class="card"><div class="n">Acuerdo PCSJA24-12243 · 2024</div><h3>La Rama Judicial fijó lineamientos</h3><p>El Consejo Superior de la Judicatura adoptó reglas para un uso responsable, seguro y ético de la inteligencia artificial. Hoy la propia Corte declara en sus sentencias cuándo usó una herramienta y para qué, por ejemplo para revisar ortografía y numeración (T-186 y T-309 de 2026).</p></div>
+      <div class="card"><div class="n">T-008 de 2026</div><h3>El juez debe verificar el uso de IA generativa</h3><p>Cuando un acto administrativo se motiva con herramientas de inteligencia artificial generativa, al juez le corresponde verificar que se respeten el debido proceso y la igualdad. La herramienta no releva a nadie.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Transparencia, corroboración y responsabilidad. Tres palabras del juez de la T-323 que el despacho convierte en archivos: un corpus visible, un informe de verificación y una firma.</p>
+      <span class="cite">Providencias consultadas en GMH LEX; los enlaces están en la biblioteca del despacho.</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="cambio-lugar" data-parte="El problema" data-titulo="La alucinación cambió de lugar">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">El problema</span></div>
+    <h2 class="rv">La alucinación cambió de lugar</h2>
+    <p class="sub rv">Ya no inventa la sentencia. Inventa la seguridad.</p>
+    <div class="cards c3 rv">
+      <div class="card"><div class="n">01</div><h3>Corpus</h3><p>El modelo no sabe qué es derecho. Solo puede leer lo que le pones delante.</p></div>
+      <div class="card"><div class="n">02</div><h3>Verificación</h3><p>Una cita sin ficha es una promesa, no una prueba.</p></div>
+      <div class="card"><div class="n">03</div><h3>Responsabilidad</h3><p>El sistema puede alertar. La decisión sigue siendo de una persona.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">La pregunta no es si el modelo es confiable. La pregunta es qué sistema lo obliga a ser verificable. Esas tres carencias son las que el despacho intenta cerrar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOS AGENTES ========== -->
+<section class="slide" id="pessoa" data-parte="Los agentes" data-titulo="¿Por qué Pessoa?">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Construimos el despacho</span></div>
+    <h2 class="rv">¿Por qué Pessoa?</h2>
+    <p class="sub rv">Voces con biografía, estilo y límites propios.</p>
+    <div class="pessoa rv">
+      <div>
+        <p>Fernando Pessoa (Lisboa, 1888–1935) no escribió con un solo nombre. Inventó heterónimos: Alberto Caeiro, Ricardo Reis, Álvaro de Campos y, como semiheterónimo, Bernardo Soares. Alexander Search fue la voz inglesa de su juventud. No eran seudónimos. Cada uno tenía una vida, un estilo y una manera propia de mirar.</p>
+        <p>Un seudónimo es un nombre falso. Un heterónimo es una voz con biografía y límites. Eso es lo que queremos de un agente: no un chatbot que lo hace todo, sino un oficio con carácter y una forma conocida de equivocarse. Pessoa, con su propio nombre, era el ortónimo. En este despacho el ortónimo eres tú: el Socio Director, quien firma.</p>
+        <div class="citas" data-citas='[{"texto":"Lo que vemos de las cosas son las cosas.","quien":"Alberto Caeiro · El Observador"},{"texto":"Busco únicamente dentro de los límites de lo que está escrito y verificado.","quien":"Alexander Search · El Investigador"},{"texto":"Sabio es quien se contenta con el espectáculo del mundo.","quien":"Ricardo Reis · El Redactor"},{"texto":"La exactitud de la partida doble es mi moral.","quien":"Bernardo Soares · El Verificador"},{"texto":"Soy lúcido e implacable.","quien":"Álvaro de Campos · El Abogado del Diablo"}]'>
+          <p class="q"></p>
+          <p class="who"></p>
+          <div class="arrows"><button type="button" data-prev aria-label="Cita anterior">←</button><button type="button" data-next aria-label="Cita siguiente">→</button></div>
+        </div>
+      </div>
+      <div class="retratos">
+        <figure><img src="assets/img/caeiro.jpg" alt="Alberto Caeiro, el Observador: un hombre mayor en un campo mirando una piedra."><figcaption><b>Caeiro</b>Observador</figcaption></figure>
+        <figure><img src="assets/img/search.jpg" alt="Alexander Search, el Investigador: un joven con lupa ante un fichero de biblioteca."><figcaption><b>Search</b>Investigador</figcaption></figure>
+        <figure><img src="assets/img/reis.jpg" alt="Ricardo Reis, el Redactor: un médico poeta sentado ante un escritorio con pluma."><figcaption><b>Reis</b>Redactor</figcaption></figure>
+        <figure><img src="assets/img/soares.jpg" alt="Bernardo Soares, el Verificador: un contable con gafas redondas sobre un libro mayor."><figcaption><b>Soares</b>Verificador</figcaption></figure>
+        <figure><img src="assets/img/campos.jpg" alt="Álvaro de Campos, el Abogado del Diablo: un ingeniero naval con monóculo en un muelle."><figcaption><b>Campos</b>Abogado del Diablo</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="caeiro" data-parte="Los agentes" data-titulo="01 · El Observador">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Los cinco agentes</span></div>
+    <div class="agente rv">
+      <div class="retrato frame"><i class="c"></i>
+        <img src="assets/img/caeiro.jpg" alt="Alberto Caeiro, el Observador, mira con calma una piedra en un campo al amanecer.">
+        <div class="pie-img m11 dim"><span>Alberto Caeiro</span><span>Heterónimo</span></div>
+      </div>
+      <div class="ficha">
+        <div class="num">01</div>
+        <h2>El Observador</h2>
+        <p class="nombre">Alberto Caeiro</p>
+        <p class="cita">Lo que vemos de las cosas son las cosas.</p>
+        <p class="oficio">Separa lo probado de lo que solo se dice. Ordena los hechos en el tiempo, con su prueba al lado, y marca <code>NO CONSTA</code> lo que no tiene soporte en el expediente.</p>
+        <div class="datos">
+          <div><div class="k">Lee</div><div class="v">El expediente y la entrevista con el inventario de pruebas (<code>01-entrada/</code>).</div></div>
+          <div><div class="k">Escribe</div><div class="v"><code>02-hechos/hechos.md</code></div></div>
+          <div><div class="k">Puede ejecutar</div><div class="v"><code>herramientas/calcular_plazos.py</code></div></div>
+          <div><div class="k">No hace</div><div class="v">No interpreta derecho, no cita sentencias, no promete resultados.</div></div>
+          <div class="falla"><div class="k">Cómo falla</div><div class="v">La empatía: dar por probado lo que el cliente cuenta con convicción pero no aporta.</div></div>
+        </div>
+        <p class="lema">Su virtud es la sequedad. La prueba de fuego es su tabla de afirmaciones que no constan: si todo le parece probado, no está observando, está creyendo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="search" data-parte="Los agentes" data-titulo="02 · El Investigador">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Los cinco agentes</span></div>
+    <div class="agente rv">
+      <div class="retrato frame"><i class="c"></i>
+        <img src="assets/img/search.jpg" alt="Alexander Search, el Investigador, saca una ficha de un fichero de madera con una lupa en la otra mano.">
+        <div class="pie-img m11 dim"><span>Alexander Search</span><span>Heterónimo</span></div>
+      </div>
+      <div class="ficha">
+        <div class="num">02</div>
+        <h2>El Investigador</h2>
+        <p class="nombre">Alexander Search</p>
+        <p class="cita">Busco únicamente dentro de los límites de lo que está escrito y verificado.</p>
+        <p class="oficio">Busca en la biblioteca cerrada del despacho y arma fichas de cita literales: archivo, identificador, ubicación exacta y texto copiado letra por letra. No redacta.</p>
+        <div class="datos">
+          <div><div class="k">Lee</div><div class="v">Los hechos probados, el corpus que indica el expediente y la plantilla de ficha de cita.</div></div>
+          <div><div class="k">Escribe</div><div class="v"><code>03-investigacion/investigacion.md</code></div></div>
+          <div><div class="k">Puede ejecutar</div><div class="v">Ningún programa. Sin internet.</div></div>
+          <div><div class="k">Entrega</div><div class="v">Un informe con fichas citables y una lista de citas descartadas.</div></div>
+          <div class="falla"><div class="k">Cómo falla</div><div class="v">La erudición: citar de memoria, o atribuir a una sentencia real una tesis que no dice.</div></div>
+        </div>
+        <p class="lema">Es el que más se parece a un investigador jurídico y el que más peligro tiene: la erudición suena convincente aunque esté mal. Lo que no está en la biblioteca se declara <code>FUERA DEL CORPUS</code>, nunca inexistente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="reis" data-parte="Los agentes" data-titulo="03 · El Redactor">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Los cinco agentes</span></div>
+    <div class="agente rv">
+      <div class="retrato frame"><i class="c"></i>
+        <img src="assets/img/reis.jpg" alt="Ricardo Reis, el Redactor, sentado muy recto ante un escritorio sobrio con la pluma sobre una sola hoja.">
+        <div class="pie-img m11 dim"><span>Ricardo Reis</span><span>Heterónimo</span></div>
+      </div>
+      <div class="ficha">
+        <div class="num">03</div>
+        <h2>El Redactor</h2>
+        <p class="nombre">Ricardo Reis</p>
+        <p class="cita">Sabio es quien se contenta con el espectáculo del mundo.</p>
+        <p class="oficio">Redacta el documento siguiendo la plantilla de la materia, con los hechos de Caeiro y las fichas de Search. Nada más. Ni investiga ni añade.</p>
+        <div class="datos">
+          <div><div class="k">Lee</div><div class="v">Hechos, investigación y la plantilla del documento. No ve la entrevista ni el corpus.</div></div>
+          <div><div class="k">Escribe</div><div class="v"><code>04-borrador/borrador.md</code></div></div>
+          <div><div class="k">Puede ejecutar</div><div class="v">Ningún programa. Sin internet.</div></div>
+          <div><div class="k">Entrega</div><div class="v">Un borrador trazable: cada párrafo señala su hecho o su ficha. No es un escrito final.</div></div>
+          <div class="falla"><div class="k">Cómo falla</div><div class="v">La elegancia: adornar, redondear una fecha, añadir una cita «que todo el mundo conoce».</div></div>
+        </div>
+        <p class="lema">Si el borrador necesita un dato que no está en los hechos ni en las fichas, no lo inventa. Deja el hueco a la vista: <code>[NO CONSTA EN EL EXPEDIENTE — COMPLETAR POR EL SOCIO DIRECTOR]</code>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="soares" data-parte="Los agentes" data-titulo="04 · El Verificador">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Los cinco agentes</span></div>
+    <div class="agente rv">
+      <div class="retrato frame"><i class="c"></i>
+        <img src="assets/img/soares.jpg" alt="Bernardo Soares, el Verificador, repasa con el dedo las columnas de un libro mayor bajo una lámpara verde.">
+        <div class="pie-img m11 dim"><span>Bernardo Soares</span><span>Semiheterónimo</span></div>
+      </div>
+      <div class="ficha">
+        <div class="num">04</div>
+        <h2>El Verificador</h2>
+        <p class="nombre">Bernardo Soares</p>
+        <p class="cita">La exactitud de la partida doble es mi moral.</p>
+        <p class="oficio">Coteja cada cita contra el archivo del corpus y cada fecha contra el expediente. Nunca reescribe el borrador: emite un informe con un dictamen.</p>
+        <div class="datos">
+          <div><div class="k">Lee</div><div class="v">Borrador, hechos, investigación, entrada y corpus.</div></div>
+          <div><div class="k">Escribe</div><div class="v"><code>05-auditoria/informe-verificacion.md</code></div></div>
+          <div><div class="k">Puede ejecutar</div><div class="v"><code>verificar_citas.py</code> y <code>calcular_plazos.py</code></div></div>
+          <div><div class="k">Veredictos</div><div class="v"><code>COINCIDE</code> · <code>NO COINCIDE</code> · <code>FUERA DEL CORPUS</code></div></div>
+          <div class="falla"><div class="k">Cómo falla</div><div class="v">La confianza: aprobar una cita porque suena bien o porque la escribió el redactor.</div></div>
+        </div>
+        <p class="lema">Es el contable del despacho: no embellece, cuadra. Primero corre la máquina y copia su salida; después abre cada archivo. El tercer veredicto es el que protege la Regla 7: que una sentencia no esté en la carpeta no prueba que no exista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="campos" data-parte="Los agentes" data-titulo="05 · El Abogado del Diablo">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Los cinco agentes</span></div>
+    <div class="agente rv">
+      <div class="retrato frame"><i class="c"></i>
+        <img src="assets/img/campos.jpg" alt="Álvaro de Campos, el Abogado del Diablo, con monóculo y corbata suelta, apoyado en la baranda de un muelle con grúas al fondo.">
+        <div class="pie-img m11 dim"><span>Álvaro de Campos</span><span>Heterónimo</span></div>
+      </div>
+      <div class="ficha">
+        <div class="num">05</div>
+        <h2>El Abogado del Diablo</h2>
+        <p class="nombre">Álvaro de Campos</p>
+        <p class="cita">Soy lúcido e implacable.</p>
+        <p class="oficio">Lee el borrador como lo leería el juez que quiere declararlo improcedente y como el apoderado de la contraparte que va a contestarlo. Busca la grieta que hunde la acción y propone cómo blindarla.</p>
+        <div class="datos">
+          <div><div class="k">Lee</div><div class="v">Borrador, hechos, entrada y el informe de verificación. No lee la investigación.</div></div>
+          <div><div class="k">Escribe</div><div class="v"><code>05-auditoria/informe-riesgo.md</code></div></div>
+          <div><div class="k">Puede ejecutar</div><div class="v">Ningún programa.</div></div>
+          <div><div class="k">Califica</div><div class="v">Cada riesgo como <code>ALTO</code>, <code>MEDIO</code> o <code>BAJO</code>, con la prueba o el archivo del corpus que lo sostiene.</div></div>
+          <div class="falla"><div class="k">Cómo falla</div><div class="v">La complacencia: encontrar solo riesgos fáciles y no el que hunde la acción. O criticar por deporte.</div></div>
+        </div>
+        <p class="lema">Su virtud es la incomodidad. Un buen informe de riesgo no dice «está bien»; dice «por aquí se cae». Si no encuentra nada, el problema es el auditor, no el borrador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="director" data-parte="Los agentes" data-titulo="El Socio Director eres tú">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Los cinco agentes</span></div>
+    <h2 class="rv">El Socio Director eres tú</h2>
+    <p class="sub rv">El sistema no decide. Te devuelve una decisión mejor informada.</p>
+    <div class="lado rv">
+      <div class="frame"><i class="c"></i><img src="assets/img/director.jpg" alt="Una silla vacía detrás de un escritorio de abogado, con una pluma sobre un documento con la línea de firma en blanco y un sello de bronce."></div>
+      <div class="cards c3" style="grid-template-columns:1fr">
+        <div class="card humano"><div class="n">01 · Hechos</div><h3>Apruebas los hechos</h3><p>Lees la matriz de Caeiro y decides qué entra al caso y qué queda en la tabla de lo que no consta.</p></div>
+        <div class="card humano"><div class="n">02 · Informes</div><h3>Lees los dos informes completos</h3><p>Verificación y riesgo, de principio a fin, antes de tocar el borrador.</p></div>
+        <div class="card humano"><div class="n">03 · Firma</div><h3>Decides y firmas</h3><p>Aprobado, devuelto al redactor o descartado. Nada sale sin tu firma en <code>registro.md</code>.</p></div>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Este es el puesto que no se delega. El Socio Director no es un validador automático: es la persona que responde por el escrito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LAS REGLAS ========== -->
+<section class="slide" id="flujo" data-parte="Las reglas" data-titulo="Nadie hace el trabajo de otro">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Construimos el despacho</span></div>
+    <h2 class="rv">Nadie hace el trabajo de otro</h2>
+    <p class="sub rv">Cinco agentes, dos decisiones humanas y un solo documento que se mueve.</p>
+    <div class="flujo rv">
+      <div class="paso"><div class="n">Entrada</div><h3>Entrevista y pruebas</h3><p>Lo único que ve el primer agente.</p><code>01-entrada/</code></div>
+      <div class="paso"><div class="n">01</div><h3>Caeiro</h3><p>Separa lo probado de lo que solo se dice.</p><code>02-hechos/hechos.md</code></div>
+      <div class="paso humano"><div class="n">Tú</div><h3>Apruebas los hechos</h3><p>Sin esta aprobación no hay investigación.</p></div>
+      <div class="paso"><div class="n">02</div><h3>Search</h3><p>Busca en el corpus y arma las fichas.</p><code>03-investigacion/</code></div>
+      <div class="paso"><div class="n">03</div><h3>Reis</h3><p>Redacta solo con hechos y fichas.</p><code>04-borrador/borrador.md</code></div>
+      <div class="paso"><div class="n">04 + 05</div><h3>Soares y Campos</h3><p>Verifican y atacan el mismo borrador.</p><code>05-auditoria/</code></div>
+      <div class="paso humano"><div class="n">Tú</div><h3>Decides y firmas</h3><p>Y lo anotas en el registro.</p><code>06-decision/ · registro.md</code></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Quien redacta no aprueba. Quien investiga no firma. Quien firma es humano.</p>
+      <span class="tag">En el chat: un chat nuevo por agente · En Claude Code y OpenCode: un agente a la vez, con permisos · En Codex: un hilo por paso</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="estatuto" data-parte="Las reglas" data-titulo="El Estatuto es la norma suprema">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Estatuto y reglas</span></div>
+    <h2 class="rv">El Estatuto es la norma suprema</h2>
+    <p class="sub rv">Lo primero que lee cada agente. Lo primero que pegas en cada chat.</p>
+    <div class="cards c3 rv">
+      <div class="card"><div class="n">01</div><h3>Siete reglas</h3><p>El mínimo que convierte una cadena de texto en un despacho.</p></div>
+      <div class="card"><div class="n">02</div><h3>Confidencialidad</h3><p>En talleres y chats gratuitos solo entran casos ficticios o rigurosamente anonimizados. El secreto profesional no se negocia por comodidad.</p></div>
+      <div class="card"><div class="n">03</div><h3>Reporte de cierre</h3><p>Cada agente termina diciendo qué hizo, qué falta y qué decisión necesita del Socio Director.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Lo importante no es que las reglas estén escritas, sino cómo se hacen cumplir. Una regla que nadie puede hacer cumplir es una buena intención.</p>
+      <a class="tag" href="#" data-repo="ESTATUTO.md">ESTATUTO.md ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="siete-reglas" data-parte="Las reglas" data-titulo="Siete reglas, tres formas de cumplirlas">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Estatuto y reglas</span></div>
+    <h2 class="rv">Siete reglas, tres formas de cumplirlas</h2>
+    <p class="sub rv">No todas se cumplen igual. Saber cuál es cuál cambia el diseño.</p>
+    <div class="reglas rv">
+      <div class="card"><div class="n">Regla 1</div><h3>Corpus cerrado</h3><p>Solo existe lo que está en <code>fuentes/</code>.</p><div class="badge-row badge-wrap"><span class="badge programa">Programa</span> <span class="badge instruccion">Instrucción</span></div></div>
+      <div class="card"><div class="n">Regla 2</div><h3>Ficha de cita obligatoria</h3><p>Ninguna cita entra sin archivo, ubicación y texto literal.</p><div class="badge-wrap"><span class="badge programa">Programa</span></div></div>
+      <div class="card"><div class="n">Regla 3</div><h3>NO CONSTA ante la duda</h3><p>Lo que no está en las pruebas no se afirma.</p><div class="badge-wrap"><span class="badge instruccion">Instrucción</span> <span class="badge tu">Tú</span></div></div>
+      <div class="card"><div class="n">Regla 4</div><h3>Quien redacta no aprueba</h3><p>Cada agente lee y escribe solo lo suyo.</p><div class="badge-wrap"><span class="badge programa">Programa</span></div></div>
+      <div class="card"><div class="n">Regla 5</div><h3>Plazos con herramienta</h3><p>Los días hábiles se cuentan con la calculadora, no con el modelo.</p><div class="badge-wrap"><span class="badge programa">Programa</span> <span class="badge instruccion">Instrucción</span></div></div>
+      <div class="card"><div class="n">Regla 6</div><h3>El humano firma</h3><p>Nada sale sin la decisión del Socio Director.</p><div class="badge-wrap"><span class="badge tu">Tú</span></div></div>
+      <div class="card"><div class="n">Regla 7</div><h3>Fuera del corpus no es inexistente</h3><p>La cita se verifica en la fuente. No se declara «inexistente».</p><div class="badge-wrap"><span class="badge programa">Programa</span> <span class="badge tu">Tú</span></div></div>
+      <div class="card" style="justify-content:flex-end"><p class="m11 dim" style="color:var(--dim)">La regla 4 es la que más se ve en la demostración. La regla 6 es la que no se delega.</p></div>
+    </div>
+    <div class="leyenda rv">
+      <span><span class="badge programa">Programa</span> un programa lo impide</span>
+      <span><span class="badge instruccion">Instrucción</span> el modelo promete</span>
+      <span><span class="badge tu">Tú</span> revisas y firmas</span>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Si una regla depende solo de la buena voluntad del modelo, hay que saberlo y compensarlo con revisión.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="permiso" data-parte="Las reglas" data-titulo="Permiso no es lo mismo que promesa">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Estatuto y reglas</span></div>
+    <h2 class="rv">Permiso no es lo mismo que promesa</h2>
+    <p class="sub rv">La diferencia entre «no puede» y «le pedimos que no lo haga».</p>
+    <div class="dos rv">
+      <div class="promesa">
+        <h3>Promesa</h3>
+        <p class="sub-h">Chat · Codex</p>
+        <ul>
+          <li>El prompt dice: «no inventes».</li>
+          <li>El rol dice: «no escribas fuera de tu archivo».</li>
+          <li>El modelo puede obedecer. O no.</li>
+        </ul>
+      </div>
+      <div class="permiso">
+        <h3>Permiso</h3>
+        <p class="sub-h">Claude Code · OpenCode</p>
+        <ul>
+          <li>Un programa compara la ruta y bloquea la escritura.</li>
+          <li>El agente no puede leer lo que no le toca.</li>
+          <li>El sistema no depende de la buena voluntad.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">En el chat, la separación de funciones es una promesa. En el entorno con permisos, es un permiso. No es que un modelo sea mejor: el sistema es distinto, y hay que saberlo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="biblioteca" data-parte="Las reglas" data-titulo="La biblioteca es la fuente de verdad">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Estatuto y reglas</span></div>
+    <h2 class="rv">La biblioteca es la fuente de verdad</h2>
+    <p class="sub rv">El modelo no sabe derecho. Sabe leer lo que le pones delante.</p>
+    <div class="biblio rv">
+      <div class="frame"><i class="c"></i><img src="assets/img/biblioteca.jpg" alt="Una sala de biblioteca cerrada con vitrinas de libros selladas con lacre rojo y un libro abierto sobre un atril."></div>
+      <div>
+        <div class="carpetas">
+          <div><code>00_transversal/</code><span>Constitución, tutela, petición, agencia oficiosa.</span></div>
+          <div><code>01_salud/</code><span>Derecho a la salud y suministros.</span></div>
+          <div><code>02_laboral/</code><span>Estabilidad reforzada, contrato realidad, Ley 2452 de 2025.</span></div>
+          <div><code>03_habeas_data/</code><span>Reportes negativos y datos personales.</span></div>
+        </div>
+        <div class="numeros">
+          <div><div class="big" id="n-fuentes">24</div><div class="m11">Fuentes jurídicas</div></div>
+          <div><div class="big">26</div><div class="m11">Archivos sellados con SHA-256</div></div>
+        </div>
+        <p style="margin:18px 0 10px;font-size:15px;max-width:52ch">Cada archivo declara su tipo (literal, extracto, resumen o distractor), el enlace a la fuente oficial y la fecha de consulta. Las fuentes nuevas se trajeron con el conector GMH LEX y conservan el enlace al PDF de cada providencia. Los archivos marcados <code>DISTRACTOR-</code> están ahí a propósito, para entrenar el criterio del Investigador.</p>
+        <span class="cmd">python herramientas/verificar_corpus.py --comprobar</span>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Solo existe lo que está en <code>fuentes/</code>. Lo que no está se declara fuera del corpus; nunca «inexistente». Esa distinción es jurídica, no técnica.</p>
+      <span class="tag">Reglas 1 y 7</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="rastro" data-parte="Las reglas" data-titulo="Cada paso deja un rastro">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Estatuto y reglas</span></div>
+    <h2 class="rv">Cada paso deja un rastro</h2>
+    <p class="sub rv">La carpeta del caso es el expediente. El expediente es la fuente de verdad.</p>
+    <div class="lado rv">
+      <ul class="lista-h">
+        <li><code>00-expediente.md</code><span>Materia, corpus, rutas y Director.</span></li>
+        <li><code>01-entrada/</code><span>Entrevista y pruebas. Lo único que ve Caeiro.</span></li>
+        <li><code>02-hechos/hechos.md</code><span>Matriz de hechos y tabla de NO CONSTA.</span></li>
+        <li><code>03-investigacion/investigacion.md</code><span>Fichas de cita y citas descartadas.</span></li>
+        <li><code>04-borrador/borrador.md</code><span>Documento redactado solo con lo anterior.</span></li>
+        <li><code>05-auditoria/</code><span>Informe de verificación e informe de riesgo.</span></li>
+        <li><code>06-decision/ + registro.md</code><span>Decisión del Socio Director y bitácora.</span></li>
+      </ul>
+      <div class="frame"><i class="c"></i><img src="assets/img/expediente.jpg" alt="Un expediente grueso visto desde arriba, con siete pestañas en el borde, atado con una cinta y cerrado con un sello de lacre."></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">El índice es una vista. El expediente manda. El registro deja rastro. Si el índice y el expediente se contradicen, gana el expediente, como en un proceso judicial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DEMOSTRACIÓN ========== -->
+<section class="slide" id="demo-permiso" data-parte="Demostración" data-titulo="Demo: el permiso se ve">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Demostración</span></div>
+    <h2 class="rv">El permiso se ve</h2>
+    <p class="sub rv">Le pedimos a Caeiro que haga algo que no le corresponde: escribir el borrador.</p>
+    <div class="demo rv">
+      <div class="term">
+        <div class="bar"><span>claude code · casos/caso-01-salud</span><span>hook PreToolUse</span></div>
+<pre><span class="p">$</span> @01-observador-caeiro Escribe el archivo
+  casos/caso-01-salud/04-borrador/borrador.md
+  con el texto "prueba".
+
+<span class="bad">BLOQUEADO POR EL DESPACHO PESSOA:</span> 01-observador-caeiro
+solo puede escribir: casos/*/02-hechos/hechos.md,
+casos/*/hechos.md. Intentó escribir
+«casos/caso-01-salud/04-borrador/borrador.md».
+<span class="k">Regla 4 del Estatuto: quien redacta no aprueba.</span>
+
+<span class="c">código de salida: 2</span></pre>
+      </div>
+      <div class="texto">
+        <h3>Lo que acabas de ver</h3>
+        <p>No es el modelo portándose bien. Es un programa que compara la ruta con <code>despacho/permisos.json</code> antes de escribir, y que falla cerrado: lo que no entiende, lo bloquea.</p>
+        <p class="nota">En OpenCode la regla es la misma; cambia la forma de aplicarla. En Codex y en el chat esto es una instrucción, no un permiso.</p>
+        <p class="nota">Si el bloqueo no aparece, se revisa la versión de Claude Code y el diálogo de confianza de la carpeta.</p>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">El permiso se aplica antes de escribir. La regla no depende de la buena voluntad del modelo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="demo-caso" data-parte="Demostración" data-titulo="Demo: un caso, de la entrada a la decisión">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Demostración</span></div>
+    <h2 class="rv">Un caso, de la entrada a la decisión</h2>
+    <p class="sub rv">Cinco agentes, un expediente que se va llenando. Un agente a la vez.</p>
+    <div class="flujo rv" style="grid-template-columns:repeat(5,1fr)">
+      <div class="paso"><div class="n">01</div><h3>Caeiro</h3><p>Lee la entrevista y escribe los hechos.</p><code>02-hechos/hechos.md</code></div>
+      <div class="paso"><div class="n">02</div><h3>Search</h3><p>Busca en el corpus y arma las fichas.</p><code>03-investigacion/investigacion.md</code></div>
+      <div class="paso"><div class="n">03</div><h3>Reis</h3><p>Redacta solo con hechos y fichas.</p><code>04-borrador/borrador.md</code></div>
+      <div class="paso"><div class="n">04</div><h3>Soares</h3><p>Coteja citas y fechas.</p><code>05-auditoria/informe-verificacion.md</code></div>
+      <div class="paso"><div class="n">05</div><h3>Campos</h3><p>Ataca el borrador como la contraparte.</p><code>05-auditoria/informe-riesgo.md</code></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Qué mirar en cada salida: la tabla de <strong>NO CONSTA</strong> de los hechos, el <strong>2026-10-19</strong> de la calculadora, la T-999 declarada <strong>FUERA DEL CORPUS</strong>, los <strong>COINCIDE</strong> del verificador y el riesgo que señala Campos.</p>
+      <span class="tag">Lee el Reporte de Cierre antes de pasar al siguiente</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="demo-verificador" data-parte="Demostración" data-titulo="Demo: la prueba que no depende del modelo">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Demostración</span></div>
+    <h2 class="rv">La prueba que no depende del modelo</h2>
+    <p class="sub rv">Altera una cifra dentro de una cita y corre el verificador.</p>
+    <div class="demo rv">
+      <div class="term">
+        <div class="bar"><span>verificar_citas.py · prueba de control</span><span>salida de ejemplo, mismo formato</span></div>
+<pre><span class="p">$</span> python herramientas/verificar_citas.py casos/caso-01-salud/04-borrador/borrador.md
+Citas de casos/caso-01-salud/04-borrador/borrador.md
+<span class="ok">✔</span> L41 FICHA-01 · <span class="ok">COINCIDE</span> · fuentes/00_transversal/constitucion_art_23_86.md
+    la cita aparece literalmente en el archivo
+<span class="bad">✘</span> L58 FICHA-03 · <span class="bad">NO COINCIDE</span> · fuentes/01_salud/corte_const_SU-508_2020_suministros.md
+    la cita no aparece literalmente en un mismo párrafo citado del archivo
+Resumen: 2 citas cotejadas · 0 referencias sin cita textual · 1 con problemas.
+<span class="c">código de salida: 1</span></pre>
+      </div>
+      <div class="texto">
+        <img src="assets/img/cotejo.jpg" alt="Dos documentos lado a lado bajo una lámpara, con una lupa y una palabra rodeada en rojo donde los textos difieren.">
+        <h3>Esto no es confianza</h3>
+        <p>Es un programa comparando texto. No le importa que el modelo suene seguro, que el redactor sea elegante o que el cliente tenga prisa. La cita alterada no pasa, el código de salida es 1 y el informe queda en el expediente.</p>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Si el modelo no cae en la trampa, esta prueba sí la detecta. Funciona incluso si la demostración en vivo falla.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="tres-herramientas" data-parte="Demostración" data-titulo="Tres herramientas, tres garantías">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Demostración</span></div>
+    <h2 class="rv">Tres herramientas, tres garantías distintas</h2>
+    <p class="sub rv">El mismo caso, la misma regla, otra forma de hacerla cumplir.</p>
+    <div class="cards c3 rv">
+      <div class="card"><div class="n">Claude Code</div><h3>Un hook antes de cada escritura</h3><p>Se ve como «BLOQUEADO POR EL DESPACHO PESSOA». El permiso se aplica por código. Hace falta aceptar el diálogo de confianza de la carpeta.</p><div class="badge-wrap" style="margin-top:auto;padding-top:14px"><span class="badge programa">Permiso</span></div></div>
+      <div class="card"><div class="n">OpenCode</div><h3>Reglas de ruta por agente</h3><p>La edición fuera del archivo propio se niega. El permiso se aplica por configuración. La versión instalada importa: hay que confirmar que aplica las reglas de lectura y escritura.</p><div class="badge-wrap" style="margin-top:auto;padding-top:14px"><span class="badge programa">Permiso</span></div></div>
+      <div class="card"><div class="n">Codex y chat</div><h3>Instrucción, no permiso</h3><p>Cada agente tiene un rol y un archivo, pero no hay un programa que bloquee la ruta. Soares y Campos devuelven su informe como texto y tú lo guardas. La garantía es la instrucción y tu revisión.</p><div class="badge-wrap" style="margin-top:auto;padding-top:14px"><span class="badge instruccion">Promesa</span></div></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">La lección no es qué herramienta es mejor. Es saber qué está garantizado y qué no, antes de confiar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TALLER ========== -->
+<section class="slide" id="version-publica" data-parte="Taller" data-titulo="La versión que te llevas">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">La versión pública</span></div>
+    <h2 class="rv">La versión que te llevas</h2>
+    <p class="sub rv">Sin casos resueltos: la plantilla, la biblioteca y el método. El aprendizaje está en construir el expediente, no en mirar uno terminado.</p>
+    <div class="cards c4 rv">
+      <div class="card"><div class="n">Repositorio</div><h3>Todo el sistema</h3><p>Agentes, materias, fuentes, guías, web y herramientas. Se descarga como ZIP o se clona.</p></div>
+      <div class="card"><div class="n">Casos</div><h3>Solo la plantilla</h3><p>La carpeta <code>casos/</code> trae la plantilla y un índice vacío. El primer caso lo creas tú.</p></div>
+      <div class="card"><div class="n">Biblioteca</div><h3><span id="n-fuentes-2">24</span> fuentes selladas</h3><p>Catálogo en <code>fuentes/00-indice.md</code> y huella de cada archivo en <code>SELLO.json</code>.</p></div>
+      <div class="card"><div class="n">Licencia</div><h3>MIT</h3><p>Se puede usar, copiar, modificar y adaptar, conservando el aviso.</p></div>
+    </div>
+    <div class="pie rv">
+      <p class="frase"><a href="#" data-repo="" style="text-decoration:none;border-bottom:1px solid var(--line)"><span data-repo-text>github.com/jorgeavillegas/despacho-pessoa-estudiantes</span> ↗</a></p>
+      <span class="tag">La web del despacho y la calculadora de plazos están en la carpeta <code>web/</code></span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="primer-caso" data-parte="Taller" data-titulo="Tu primer caso en un comando">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">La versión pública</span></div>
+    <h2 class="rv">Tu primer caso en un comando</h2>
+    <p class="sub rv">El script no inventa el caso. Te da la estructura y te obliga a llenarla.</p>
+    <div class="demo rv">
+      <div class="term">
+        <div class="bar"><span>nuevo_caso.py · terminal</span><span>interactivo</span></div>
+<pre><span class="p">$</span> python herramientas/nuevo_caso.py
+Materias disponibles: tutela, demanda-laboral
+Materia [tutela]:
+Nombre del caso: Mi primer caso
+¿Cómo quiere que lo llame? [Socio Director]: Ana
+¿Trato de tú o de usted? [usted]:
+
+<span class="ok">Caso creado:</span> casos/mi-primer-caso
+Siguiente paso: abre 01-entrada/entrevista-y-pruebas.md</pre>
+      </div>
+      <div class="texto">
+<pre class="arbol"><b>casos/mi-primer-caso/</b>
+├── 00-expediente.md            <i>carátula</i>
+├── 01-entrada/
+│   ├── entrevista-y-pruebas.md <i>tú la llenas</i>
+│   └── pruebas/
+├── 02-hechos/                  <i>Caeiro</i>
+├── 03-investigacion/           <i>Search</i>
+├── 04-borrador/                <i>Reis</i>
+├── 05-auditoria/               <i>Soares y Campos</i>
+├── 06-decision/                <i>tú</i>
+└── 07-archivo/</pre>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">Lo que decide el caso no es la herramienta. Es la calidad de la entrada: si la entrevista es pobre, el despacho no tiene de dónde sacar hechos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="taller" data-parte="Taller" data-titulo="Ahora te toca a ti">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Taller</span></div>
+    <h2 class="rv">Ahora te toca a ti</h2>
+    <p class="sub rv">Tres pasos y un caso ficticio. El objetivo no es que quede perfecto: es vivir el primer paso y entender por qué la entrada lo decide todo.</p>
+    <div class="lado rv">
+      <div class="pasos3" style="grid-template-columns:1fr">
+        <div class="card"><div class="n">01</div><h3>Crea el caso</h3><p>Elige la materia, el nombre del caso y cómo quieres que te llame el despacho.</p><code>python herramientas/nuevo_caso.py</code></div>
+        <div class="card"><div class="n">02</div><h3>Llena la entrada</h3><p>Relato e inventario de pruebas. Solo hechos y documentos; nada de conclusiones jurídicas.</p><code>01-entrada/entrevista-y-pruebas.md</code></div>
+        <div class="card"><div class="n">03</div><h3>Lanza a Caeiro</h3><p>Lee su Reporte de Cierre como Socio Director antes de hacer nada más.</p><code>@01-observador-caeiro Lee casos/&lt;tu-caso&gt;/01-entrada/… y escribe 02-hechos/hechos.md</code></div>
+      </div>
+      <div>
+        <div class="m11 dim" style="margin-bottom:12px">Lista del Socio Director</div>
+        <ul class="check">
+          <li>¿Qué está probado?</li>
+          <li>¿Qué no consta?</li>
+          <li>¿Qué contradice una prueba?</li>
+          <li>¿Qué harías con la T-999?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie rv">
+      <p class="frase">En Webex, escribe tu pregunta en el chat. En el salón, levanta la mano.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CIERRE ========== -->
+<section class="slide" id="balance" data-parte="Cierre" data-titulo="Qué se llevan y qué no">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Cierre</span></div>
+    <h2 class="rv">Qué te llevas y qué no</h2>
+    <p class="sub rv">Sin promesas heroicas: un método que se puede usar mañana, incluso sin instalar nada.</p>
+    <div class="dos rv">
+      <div>
+        <h3>Lo que gana un despacho</h3>
+        <p class="sub-h">Con el método</p>
+        <ul>
+          <li>Una manera repetible de usar IA.</li>
+          <li>Trazabilidad: cada afirmación tiene un archivo.</li>
+          <li>Un hábito de verificación en lugar de uno de confianza.</li>
+          <li>Una biblioteca propia y un lenguaje común.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Lo que no gana</h3>
+        <p class="sub-h">Ni con este ni con ningún sistema</p>
+        <ul>
+          <li>Cero alucinaciones.</li>
+          <li>Responsabilidad delegada.</li>
+          <li>Criterio jurídico automático.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie rv">
+      <div>
+        <div class="m11 dim" style="margin-bottom:10px">Siete prácticas para mañana</div>
+        <p class="frase">Ten un corpus propio y sellado. Ninguna cita sin ficha. Marca NO CONSTA antes de rellenar. Cuenta los plazos con la calculadora. Separa investigación, redacción y verificación. Lee los dos informes completos. Firma tú, siempre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="gracias" data-parte="Cierre" data-titulo="Gracias">
+  <div class="inner">
+    <div class="kicker rv"><span class="num"></span><span class="parte">Cierre</span></div>
+    <p class="gracias-q rv" lang="es">Todo vale la pena si el alma no es pequeña.</p>
+    <p class="m11 dim rv">Fernando Pessoa · traducción propia</p>
+    <p class="rv" style="font-size:clamp(20px,2vw,30px);margin:28px 0 0">El humano firma.</p>
+    <div class="gracias-links rv">
+      <a href="index.html"><div class="m11">Web del despacho</div><div>Guías, agentes y calculadora de plazos</div></a>
+      <a href="#" data-repo=""><div class="m11">Repositorio</div><div data-repo-text>github.com/jorgeavillegas/despacho-pessoa-estudiantes</div></a>
+    </div>
+    <p class="firma rv">Jorge Alberto Villegas · Semana del Derecho · Universidad Autónoma de Occidente · 30 de octubre de 2026</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie-final">Despacho Pessoa · Licencia MIT · Casos ficticios: nunca pegues en un chat gratuito datos reales de una persona</footer>
+
+<script src="assets/presentacion.js"></script>
+</body>
+</html>

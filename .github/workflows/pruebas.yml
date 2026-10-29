@@ -1,0 +1,25 @@
+name: Pruebas
+on:
+  push:
+  pull_request:
+jobs:
+  pruebas:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Pruebas de Python
+        run: python -m unittest discover -s herramientas/tests -v
+      - name: Pruebas de la calculadora web
+        run: node --test web/tests/plazos.test.js
+      - name: Agentes y datos de la web al día
+        run: |
+          python despacho/generar_adaptadores.py --solo-validar
+          python web/generar_datos_web.py --comprobar
+      - name: Corpus sellado
+        run: python herramientas/verificar_corpus.py --comprobar

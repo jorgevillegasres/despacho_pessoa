@@ -1,0 +1,11 @@
+{
+  "id": "demanda-laboral",
+  "nombre": "Demanda laboral",
+  "descripcion": "Escrito de demanda para el proceso ordinario laboral.",
+  "tipo_documento": "demanda laboral",
+  "plantilla": "materias/demanda-laboral/plantillas/modelo-demanda-laboral.md",
+  "checklist": "materias/demanda-laboral/checklist.md",
+  "plazos": "materias/demanda-laboral/plazos.json",
+  "corpus_por_defecto": ["fuentes/00_transversal", "fuentes/02_laboral"],
+  "salida": "borrador.md"
+}

@@ -1,0 +1,89 @@
+/* Estilos del sitio del Despacho Pessoa. Sin animaciones: se proyecta en un salón. */
+:root {
+  --fondo: #faf8f4;
+  --texto: #1d1b18;
+  --suave: #5b554c;
+  --linea: #ddd6ca;
+  --tarjeta: #ffffff;
+  --acento: #8a2c1d;
+  --sobre-acento: #ffffff;
+  --humano: #1f5f4a;
+  --serif: "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #171513;
+    --texto: #f1ece4;
+    --suave: #b3ab9e;
+    --linea: #3a352f;
+    --tarjeta: #211e1b;
+    --acento: #e8907b;
+    --sobre-acento: #171513;
+    --humano: #7cc7a8;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { font-size: 112.5%; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 1rem/1.6 var(--sans); }
+.ancho { max-width: 60rem; margin: 0 auto; padding: 0 16px; }
+section { padding: 3rem 0; border-top: 1px solid var(--linea); }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.2; margin: 0 0 .75rem; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); }
+h2 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); }
+h3 { font-size: 1.35rem; }
+p { max-width: 42rem; }
+a { color: var(--acento); }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+code { font-family: var(--mono); font-size: .88em; overflow-wrap: anywhere; }
+pre { font-family: var(--mono); font-size: .95rem; background: var(--tarjeta); border: 1px solid var(--linea);
+      border-radius: .4rem; padding: 1rem; overflow-x: auto; white-space: pre; }
+
+.portada { padding: 4rem 0 3rem; }
+.portada.corta { padding: 2rem 0 1rem; }
+.fecha { color: var(--suave); font-size: 1.1rem; margin: 0 0 1.5rem; }
+.entrada { font-size: 1.2rem; }
+.botones { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.boton { display: inline-block; font: inherit; font-weight: 700; font-size: 1.15rem; padding: .9rem 1.4rem;
+         border-radius: .5rem; border: 2px solid var(--acento); background: var(--acento);
+         color: var(--sobre-acento); text-decoration: none; cursor: pointer; }
+.boton.secundario { background: transparent; color: var(--acento); }
+
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: .5rem; padding: 1.25rem; }
+.flujo { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; counter-reset: paso; }
+.flujo li { background: var(--tarjeta); border: 1px solid var(--linea); border-left: 6px solid var(--acento);
+            border-radius: .4rem; padding: .7rem 1rem; counter-increment: paso; }
+.flujo li::before { content: counter(paso) ". "; font-weight: 700; }
+.flujo li.humano { border-left-color: var(--humano); }
+.etiqueta-humano { color: var(--humano); font-weight: 700; }
+.engranajes { margin-top: 1.5rem; }
+.columnas { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+
+[role="tablist"] { display: flex; flex-wrap: wrap; gap: .5rem; }
+/* Bordes de controles con --suave (contraste >= 3:1); --linea queda para tarjetas y separadores. */
+[role="tab"] { font: inherit; padding: .55rem 1rem; border: 1px solid var(--suave); border-radius: .4rem;
+               background: var(--tarjeta); color: var(--texto); cursor: pointer; }
+[role="tab"][aria-selected="true"] { background: var(--acento); border-color: var(--acento); color: var(--sobre-acento); }
+.ficha { margin-top: 1rem; }
+.ficha blockquote { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--suave); margin: 0 0 1rem; }
+.ficha dt { font-weight: 700; margin-top: .6rem; }
+.ficha dd { margin: 0; }
+
+.reglas { list-style: none; padding: 0; display: grid; gap: 1rem; counter-reset: regla; }
+.reglas li { counter-increment: regla; }
+.reglas h3::before { content: "Regla " counter(regla) ". "; color: var(--acento); }
+.reglas .cumplimiento { color: var(--suave); margin: .4rem 0 0; }
+
+.calculadora { display: grid; gap: 1rem; max-width: 36rem; }
+.calculadora label { display: block; font-weight: 600; margin-bottom: .3rem; }
+.calculadora input, .calculadora select { font: inherit; width: 100%; padding: .6rem; border-radius: .4rem;
+  border: 1px solid var(--suave); background: var(--tarjeta); color: var(--texto); }
+.calculadora .casilla { display: flex; gap: .5rem; align-items: center; font-weight: 400; }
+.calculadora .casilla input { width: auto; }
+.resultado-grande { font-family: var(--serif); font-size: 1.6rem; margin: 1.5rem 0 1rem; }
+.nota { color: var(--suave); }
+footer { padding: 2rem 0 3rem; color: var(--suave); border-top: 1px solid var(--linea); }

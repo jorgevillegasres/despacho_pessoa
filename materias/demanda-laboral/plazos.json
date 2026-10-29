@@ -1,0 +1,17 @@
+{
+  "_nota": "Configuración de plazos de la materia demanda laboral. Los términos dependen del tipo de pretensión, de los hechos y de la norma aplicable; no se fijan aquí para no inducir a error. Verificar la norma vigente y calcular con la herramienta.",
+  "modos": {
+    "caducidad": {
+      "dias": null,
+      "unidad": "dias",
+      "base": "Verificar la norma aplicable",
+      "revisar": true
+    },
+    "prescripcion": {
+      "dias": null,
+      "unidad": "dias",
+      "base": "Verificar la norma aplicable",
+      "revisar": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_nota": "Términos de respuesta de la petición. Son los mismos modos que ya trae herramientas/calcular_plazos.py; el agente nunca los cuenta de cabeza. La prórroga que la Ley 1755 de 2015 permite a la autoridad antes del vencimiento no está en el corpus: verificarla en la fuente oficial e incorporarla antes de citarla.",
+  "modos": {
+    "peticion": {
+      "dias": 15,
+      "unidad": "habiles",
+      "base": "Art. 14 Ley 1755 de 2015 (regla general) / Art. 16 Ley 1266 de 2008 (reclamo de habeas data)"
+    },
+    "peticion_docs": {
+      "dias": 10,
+      "unidad": "habiles",
+      "base": "Art. 14 num. 1 Ley 1755 de 2015 (documentos e información)"
+    },
+    "peticion_consulta": {
+      "dias": 30,
+      "unidad": "habiles",
+      "base": "Art. 14 num. 2 Ley 1755 de 2015 (consultas)"
+    }
+  }
+}

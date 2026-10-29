@@ -1,0 +1,11 @@
+{
+  "id": "tutela",
+  "nombre": "Acción de tutela",
+  "descripcion": "Documento para solicitar la protección de derechos fundamentales en Colombia.",
+  "tipo_documento": "acción de tutela",
+  "plantilla": "plantillas/modelo-tutela.md",
+  "checklist": "materias/tutela/checklist.md",
+  "plazos": "materias/tutela/plazos.json",
+  "corpus_por_defecto": ["fuentes/00_transversal"],
+  "salida": "borrador.md"
+}

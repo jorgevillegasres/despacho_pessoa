@@ -1,0 +1,32 @@
+{
+  "sellado": "2026-10-29T23:32:59+00:00",
+  "algoritmo": "sha256",
+  "archivos": {
+    "00-indice.md": "d754cd2ec18aebb37c6aab48a293a4ac6fd5228848c7ff074a02e8e34a9da3bc",
+    "00_transversal/constitucion_art_23_86.md": "8ce53a4396b6dc81904ad0285e3c42f6f2226c2df670f4d7fcb5abfdda5aaed1",
+    "00_transversal/constitucion_arts_13_25_47_53_54_95.md": "ba195782138b203be9f8bbb601ca9ad9671fa15113c108c09c5c40ac0451b002",
+    "00_transversal/corte_const_agencia_oficiosa_T-382_2021_T-046_2026.md": "24963b4a2fda45d1588d4e84072cc3b4d4dbaa6a625c04673dd7851c01172fee",
+    "00_transversal/corte_const_derecho_de_peticion_respuesta_de_fondo_T-329_2021_T-197_2024.md": "990b733f5d06b93a566bf0feccae93a1fcbe415f40f087afadbacbd576af6409",
+    "00_transversal/corte_const_T-323_2024_inteligencia_artificial_en_la_decision_judicial.md": "249b907665255f216ae1a639effcf8136cf13466d528630a92b81f7913c57de5",
+    "00_transversal/decreto_2591_de_1991.md": "193d0be464febc708b9cecfa16a6b22c4b9ead14637ad673c3a6d3e7a255eac0",
+    "00_transversal/decreto_2591_de_1991_arts_7_42_medidas_provisionales_y_particulares.md": "4c5e547ffa7d155e163ad2f161e7d3809571bb975be4776275ccd841001c51b4",
+    "00_transversal/ley_1755_de_2015_peticion.md": "8c6f3240a5e3e70998eab79bc50c5096a28d062e658f72e3042da5e66693ab18",
+    "01_salud/corte_const_panales_e_insumos_T-332_2022_a_T-461_2024.md": "1c96999aaa138ea55c87b083f088fff38f0507b52c2afb59413bc34fbc659249",
+    "01_salud/corte_const_SU-239_2024_subsidiariedad_supersalud.md": "212a173e2cc95940ec0ecc04210fd5f539545c68b8f63380418fd400ad67cbd7",
+    "01_salud/corte_const_SU-508_2020_suministros.md": "73f4c00d83bf2b7878d4fea991e9e8e7b1085ed71cc7fbb2647ad8a95e9ae909",
+    "01_salud/corte_const_T-760_2008_extracto_oficial.md": "54596d22414466b5dbf6ac243d933b5fa3a586617664315e98cfeddbae332e76",
+    "01_salud/ley_1751_de_2015_estatutaria_salud.md": "133bfa03df99e1940bd214fa2d55c679479ebf0d4071335a41c44cc5bd1a109a",
+    "02_laboral/cgp_arts_167_176_prueba.md": "9dd319e598b63f2710de3bd35416515a45b66f925e7785a52499012dfb408f42",
+    "02_laboral/corte_const_fuero_de_salud_SU-380_2021_SU-269_2023_T-311_2025.md": "c86f3e565d7dec109074fd7103f3823a85e0096928d4182b87674a8242701f44",
+    "02_laboral/corte_const_SU-049_2017_estabilidad_ocupacional.md": "933e2afbc5476a25e0d004a7a64cf4267076843245e4c1c6c7d6b962996dee65",
+    "02_laboral/csj_sl_contrato_realidad_SL1588-2022_SL2746-2022_SL502-2023.md": "a4f7fd0e9854339baa07b8fcb60e8879f6fd670079df618711a41c516cce1d06",
+    "02_laboral/cst_art_26_ley_361_1997.md": "b00aaab253f6395303f22690829a9ccded46a039af6e12de3603ffa490e9f7ce",
+    "02_laboral/cst_arts_22_23_24_contrato_realidad.md": "7b44aa27aa26797cfd402d6c9fbe9345eedba05e17136dca34dd785244e8ddeb",
+    "02_laboral/DISTRACTOR-corte_const_T-improcedencia.md": "8370f956713554293d5e69d9b11400ac692228be2b16e5fc24b1b2caa50d79fa",
+    "02_laboral/ley_2452_de_2025_arts_61_63_demanda_laboral.md": "d565600dc8009710cbef3c9e25b7ddf41de44583b728a8c6c4fb2a94442c0d5d",
+    "03_habeas_data/corte_const_habeas_data_financiero_T-360_2022_T-584_2023_T-208_2026.md": "f6d887ba6ed54abb4b95efcb79ac4edbe6c0b8de739a00d7b41abe154d0774ee",
+    "03_habeas_data/DISTRACTOR-corte_const_SU-datos_notificacion_previa.md": "da339a1d2d2f49c02fb077033f7a63f9c50a3f6efb7a4bd010663acdd2ad40e3",
+    "03_habeas_data/ley_1266_de_2008_y_ley_2157_2021.md": "9cbf18d2ba92a1003b6fdb641d0f3eaa5b57ef19601a5632b51f4c86baa6c2d9",
+    "README.md": "acfcd624c6449e0440b1b156bb6d5d526f6eb7e35928ca69146e7ada86d20cf4"
+  }
+}

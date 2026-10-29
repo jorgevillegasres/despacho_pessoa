@@ -1,0 +1,41 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Salidas de los agentes durante la práctica (estructura nueva)
+casos/*/02-hechos/hechos.md
+casos/*/03-investigacion/investigacion.md
+casos/*/04-borrador/borrador.md
+casos/*/05-auditoria/informe-verificacion.md
+casos/*/05-auditoria/informe-riesgo.md
+
+# Salidas de los agentes durante la práctica (estructura antigua)
+casos/*/hechos.md
+casos/*/investigacion.md
+casos/*/borrador.md
+casos/*/informe-verificacion.md
+casos/*/informe-riesgo.md
+
+# La plantilla sí se publica.
+!casos/_PLANTILLA-CASO/02-hechos/hechos.md
+!casos/_PLANTILLA-CASO/03-investigacion/investigacion.md
+!casos/_PLANTILLA-CASO/04-borrador/borrador.md
+!casos/_PLANTILLA-CASO/05-auditoria/informe-verificacion.md
+!casos/_PLANTILLA-CASO/05-auditoria/informe-riesgo.md
+
+# Material privado: notas internas del despacho y documentos de trabajo.
+casos/*/privado/
+docs/conferencia/
+docs/investigacion/
+docs/superpowers/
+docs/propuestas/
+
+# Entornos, secretos y artefactos de empaquetado.
+.env
+.env.local
+.venv/
+venv/
+node_modules/
+dist/
+*.zip

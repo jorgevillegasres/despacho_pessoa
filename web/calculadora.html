@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de plazos — Despacho Pessoa</title>
+<meta name="description" content="Días hábiles en Colombia para derechos de petición y tutela, con la misma lógica que la herramienta del Despacho Pessoa.">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<header class="portada corta ancho">
+  <p><a href="index.html">← Despacho Pessoa</a></p>
+  <h1>Calculadora de plazos</h1>
+  <p class="entrada">Regla 5 del Estatuto: los plazos se cuentan con una herramienta, nunca con el modelo.
+  Esta página hace las mismas cuentas que <code>herramientas/calcular_plazos.py</code>, con los festivos de
+  Colombia de <span id="anios"></span>. Una vez abierta, no necesita internet.</p>
+</header>
+<main class="ancho">
+  <noscript><p>Esta calculadora necesita JavaScript activado en el navegador.</p></noscript>
+  <form id="formulario" class="calculadora">
+    <div><label for="modo">Tipo de término</label><select id="modo"></select></div>
+    <div><label for="inicio">Fecha de radicación o notificación</label><input type="date" id="inicio" required></div>
+    <div><label for="corte">Fecha de corte (si la dejas vacía: <span id="fecha-hoy">hoy</span>)</label>
+      <input type="date" id="corte"></div>
+    <div><label for="dias">Otro número de días hábiles (opcional)</label>
+      <input type="number" id="dias" min="1" step="1" inputmode="numeric"></div>
+    <div><label class="casilla"><input type="checkbox" id="detalle" checked> Mostrar el conteo día por día</label></div>
+    <div><button type="submit" class="boton">Calcular</button></div>
+  </form>
+  <section id="salida" hidden>
+    <p class="resultado-grande" id="resumen" aria-live="polite"></p>
+    <pre id="texto"></pre>
+    <p><button type="button" class="boton secundario" id="copiar">Copiar el resultado</button></p>
+    <p class="nota">En el chat, pega este resultado tal cual cuando Caeiro escriba <code>PLAZO PENDIENTE DE CALCULADORA</code>.
+    La calculadora solo cuenta fechas: decidir qué significan es tarea del abogado.</p>
+  </section>
+</main>
+<footer class="ancho"><p>Despacho Pessoa · Licencia MIT</p></footer>
+<script src="assets/datos.js"></script>
+<script src="assets/plazos.js"></script>
+<script>
+(function () {
+  const calc = crearCalculadora(window.DESPACHO.festivos);
+  const $ = (id) => document.getElementById(id);
+  // Fecha legible a partir de "AAAA-MM-DD". Tablas propias (no toLocaleDateString) para que
+  // el texto sea idéntico en cualquier navegador e idioma del sistema.
+  const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+    "septiembre", "octubre", "noviembre", "diciembre"];
+  function fechaLegible(iso) {
+    const [a, m, d] = iso.split("-").map(Number);
+    const f = new Date(Date.UTC(a, m - 1, d));
+    return `${DIAS[f.getUTCDay()]} ${d} de ${MESES[m - 1]} de ${a}`;
+  }
+  $("anios").textContent = calc.aniosCargados().join(" y ");
+  $("fecha-hoy").textContent = `${fechaLegible(calc.hoy())}, hoy`;
+  for (const [clave, [cantidad, descripcion, unidad]] of Object.entries(calc.MODOS)) {
+    const op = document.createElement("option");
+    op.value = clave;
+    op.textContent = `${cantidad} ${unidad === "horas" ? "horas" : "días hábiles"} — ${descripcion}`;
+    $("modo").append(op);
+  }
+  // Cualquier cambio en el formulario oculta el resultado anterior: así nunca queda uno viejo
+  // a la vista cuando el navegador bloquea el envío por un campo inválido.
+  $("formulario").addEventListener("input", () => { $("salida").hidden = true; });
+  $("formulario").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const corte = $("corte").value;
+    const dias = $("dias").value ? Number($("dias").value) : null;
+    $("salida").hidden = false;
+    $("copiar").textContent = "Copiar el resultado";
+    try {
+      const r = calc.textoReporte($("modo").value, $("inicio").value, corte || calc.hoy(),
+        { diasPersonalizados: dias, detalle: $("detalle").checked, cortePorDefecto: !corte });
+      $("resumen").textContent = `Vence el ${fechaLegible(r.vencimiento)} · ${r.estado}`;
+      $("texto").textContent = r.texto;
+    } catch (e) {
+      if (!(e instanceof calc.ErrorDeEntrada)) throw e;
+      $("resumen").textContent = "No puedo calcular";
+      $("texto").textContent = `No puedo calcular: ${e.message}`;
+    }
+  });
+  $("copiar").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText($("texto").textContent);
+      $("copiar").textContent = "Copiado";
+    } catch {
+      const rango = document.createRange();
+      rango.selectNodeContents($("texto"));
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(rango);
+      $("copiar").textContent = "Texto seleccionado: cópialo con Ctrl+C";
+    }
+  });
+})();
+</script>
+</body>
+</html>

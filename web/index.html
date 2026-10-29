@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Despacho Pessoa — sistema de trabajo jurídico</title>
+<meta name="description" content="Sistema de trabajo jurídico con cinco agentes de IA, corpus cerrado y trazabilidad. Cada agente tiene un oficio, unos límites y una forma conocida de equivocarse.">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+
+<header class="portada ancho">
+  <h1>Despacho Pessoa</h1>
+  <p class="fecha">Sistema de trabajo jurídico · Colombia</p>
+  <p class="entrada">Cinco agentes de inteligencia artificial que redactan y auditan documentos jurídicos con trazabilidad.
+  La tutela es la materia de ejemplo; el sistema se adapta a otras materias. No incluye casos precargados: tú construyes el expediente y firmas.</p>
+  <div class="botones">
+    <a class="boton" href="#empieza">Empezar</a>
+    <a class="boton secundario" href="#despacho">Cómo funciona</a>
+    <a class="boton secundario" href="presentacion.html">Ver la presentación de la conferencia</a>
+  </div>
+</header>
+
+<main class="ancho">
+
+<section id="por-que-pessoa">
+  <h2>¿Por qué Pessoa?</h2>
+  <p>Fernando Pessoa (Lisboa, 1888-1935) no escribió con un solo nombre. Creó <strong>heterónimos</strong>:
+  Alberto Caeiro, Ricardo Reis, Álvaro de Campos y, como semiheterónimo, Bernardo Soares, entre otros. No eran seudónimos: cada uno
+  tenía biografía, estilo y una manera propia de mirar el mundo. Pessoa, con su propio nombre, era el
+  <strong>ortónimo</strong>.</p>
+  <p>Un buen sistema de agentes se parece más a eso que a "un chatbot": varios roles con oficio y límites
+  propios, que se vigilan entre sí, y una persona que responde por el resultado. En este despacho los
+  heterónimos trabajan; tú eres Pessoa, el Socio Director que decide y firma.</p>
+</section>
+
+<section id="despacho">
+  <h2>El despacho</h2>
+  <p>Así viaja un caso. Cada agente deja su trabajo en un archivo y el siguiente lo recibe; nadie hace el trabajo de otro.</p>
+  <ol class="flujo" role="list">
+    <li>La <strong>entrevista y las pruebas</strong> del cliente (<code>01-entrada/entrevista-y-pruebas.md</code>).</li>
+    <li><strong>Caeiro, el Observador</strong>, separa lo probado de lo que solo se dice → <code>02-hechos/hechos.md</code></li>
+    <li class="humano"><span class="etiqueta-humano">Tú</span> revisas los hechos y los apruebas.</li>
+    <li><strong>Search, el Investigador</strong>, busca en el corpus cerrado (la carpeta <code>fuentes/</code>, lo único que los agentes pueden citar) y arma fichas de cita → <code>03-investigacion/investigacion.md</code></li>
+    <li><strong>Reis, el Redactor</strong>, escribe el documento solo con lo anterior → <code>04-borrador/borrador.md</code></li>
+    <li><strong>Soares, el Verificador</strong>, coteja cada cita y cada fecha; <strong>Campos, el Abogado del Diablo</strong>,
+      ataca el borrador como lo haría el juez → <code>05-auditoria/informe-verificacion.md</code> e <code>05-auditoria/informe-riesgo.md</code></li>
+    <li class="humano"><span class="etiqueta-humano">Tú</span> decides, corriges, firmas y lo anotas en <code>06-decision/decision.md</code> y <code>registro.md</code>.</li>
+  </ol>
+  <div class="engranajes tarjeta">
+    <h3>Los engranajes (programas, no modelos)</h3>
+    <ul>
+      <li><strong>Calculadora de plazos</strong>: cuenta días hábiles con los festivos de Colombia. La usan Caeiro y Soares.</li>
+      <li><strong>Verificador de citas</strong>: comprueba que cada cita esté, palabra por palabra, en el archivo del corpus que dice.</li>
+      <li><strong>Sello del corpus</strong>: una huella de cada archivo de <code>fuentes/</code>; detecta si alguien lo cambió.</li>
+      <li><strong>Creador de casos</strong>: <code>herramientas/nuevo_caso.py</code> copia la plantilla y deja el expediente listo.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="agentes">
+  <h2>Los cinco agentes</h2>
+  <noscript><p>Las fichas necesitan JavaScript. También están en la carpeta <code>despacho/agentes/</code> del sistema.</p></noscript>
+  <div role="tablist" aria-label="Agentes del despacho" id="pestanas"></div>
+  <div role="tabpanel" id="ficha" class="ficha tarjeta" tabindex="0"></div>
+</section>
+
+<section id="reglas">
+  <h2>Las siete reglas</h2>
+  <p>El <a data-enlace="ESTATUTO.md" href="#">Estatuto</a> es la norma suprema del despacho. Lo importante no es que
+  las reglas estén escritas, sino <strong>cómo se hacen cumplir</strong>.</p>
+  <ol class="reglas" role="list">
+    <li><h3>Corpus cerrado</h3><p>Solo existe lo que está en la carpeta <code>fuentes/</code>.</p>
+      <p class="cumplimiento">Cómo se cumple: en Claude Code y OpenCode los agentes no tienen herramientas de internet. En Codex y en el chat, por instrucción.</p></li>
+    <li><h3>Ficha de cita obligatoria</h3><p>Ninguna cita entra al borrador sin su ficha: archivo, identificador, ubicación y texto literal.</p>
+      <p class="cumplimiento">Cómo se cumple: <code>verificar_citas.py</code> busca cada cita, palabra por palabra (ignora comillas y formato), en el archivo que la ficha señala.</p></li>
+    <li><h3>"No consta" es la respuesta correcta ante la duda</h3><p>Lo que no aparece en las pruebas se declara <code>NO CONSTA</code>; no se rellena.</p>
+      <p class="cumplimiento">Cómo se cumple: por instrucción al agente y por tu revisión; Soares coteja cada hecho contra la entrevista.</p></li>
+    <li><h3>Quien redacta no aprueba</h3><p>Cada agente lee solo lo que necesita y escribe solo su archivo.</p>
+      <p class="cumplimiento">Cómo se cumple: <code>despacho/permisos.json</code>. Claude Code lo aplica con un programa que revisa cada escritura; OpenCode, con reglas por carpeta. En Codex y en el chat queda en la instrucción.</p></li>
+    <li><h3>Plazos con herramienta, nunca con el modelo</h3><p>Los modelos cuentan mal los días hábiles y los puentes festivos.</p>
+      <p class="cumplimiento">Cómo se cumple: la <a href="calculadora.html">calculadora</a> es la única herramienta de plazos que los agentes pueden ejecutar; que la usen depende de la instrucción y de tu revisión.</p></li>
+    <li><h3>El humano firma</h3><p>Ningún borrador es definitivo sin que el Socio Director lea los dos informes y lo apruebe.</p>
+      <p class="cumplimiento">Cómo se cumple: por ti. Nada sale sin tu firma en <code>registro.md</code>.</p></li>
+    <li><h3>Fuera del corpus no es lo mismo que inexistente</h3><p>Que una sentencia no esté en la carpeta no prueba que no exista.</p>
+      <p class="cumplimiento">Cómo se cumple: el verificador de citas emite tres veredictos: <code>COINCIDE</code>, <code>NO COINCIDE</code> y <code>FUERA DEL CORPUS</code> (y avisos aparte).</p></li>
+  </ol>
+</section>
+
+<section id="primer-caso">
+  <h2>Tu primer caso</h2>
+  <p>El sistema no incluye casos precargados. El aprendizaje está en construir el expediente, no en mirar uno resuelto. Un buen caso de trabajo tiene hechos que no constan, documentos que se contradicen y citas que parecen ciertas pero no están en el corpus.</p>
+  <div class="columnas">
+    <div class="tarjeta">
+      <h3>1. Crea la carpeta</h3>
+      <p>Ejecuta <code>python herramientas/nuevo_caso.py</code>. Elige la materia (tutela o demanda laboral), el nombre del caso y cómo quieres que te llame el Director.</p>
+      <p>El script copia <code>casos/_PLANTILLA-CASO/</code> y añade la fila a <code>casos/00-indice.md</code>.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>2. Escribe la entrada</h3>
+      <p>Llena <code>01-entrada/entrevista-y-pruebas.md</code> con el relato y el inventario de pruebas. Solo hechos y documentos; nada de conclusiones jurídicas.</p>
+      <p>Lo que no conste se escribe <code>NO CONSTA</code>. Añade los documentos a <code>01-entrada/pruebas/</code>.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>3. Ejecuta y audita</h3>
+      <p>Elige el modo chat o el modo local. Un agente a la vez, leyendo su Reporte de Cierre.</p>
+      <p>Al final, lee los dos informes, decide y firma en <code>06-decision/decision.md</code> y <code>registro.md</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="empieza">
+  <h2>Empieza aquí</h2>
+  <div class="columnas">
+    <div class="tarjeta" id="empieza-chat">
+      <h3>Modo chat (sin instalar agentes)</h3>
+      <ol>
+        <li>Descomprime <code>despacho-pessoa.zip</code> en una carpeta de trabajo.</li>
+        <li>Abre una terminal en la carpeta y crea tu caso con <code>python herramientas/nuevo_caso.py</code>.</li>
+        <li>Llena <code>casos/&lt;tu-caso&gt;/01-entrada/entrevista-y-pruebas.md</code>.</li>
+        <li>Abre un chat nuevo en Claude, ChatGPT o Gemini y pega <code>prompts-chat/00-apertura-chat.md</code>.</li>
+        <li>Sigue con los cinco agentes, un chat nuevo para cada uno.</li>
+      </ol>
+      <p><a data-enlace="docs/guias/nivel-1-chat.md" href="#">Guía paso a paso del modo chat</a></p>
+    </div>
+    <div class="tarjeta" id="empieza-instalar">
+      <h3>Modo local (agentes con permisos reales)</h3>
+      <ol>
+        <li>Descomprime <code>despacho-pessoa.zip</code>.</li>
+        <li>Windows: doble clic en <code>instalar.cmd</code>. Mac: abre la Terminal, escribe <code>bash </code>, arrastra <code>instalar.sh</code> a la ventana y pulsa Enter.</li>
+        <li>Elige la herramienta: Claude Code, OpenCode o Codex.</li>
+        <li>Crea tu caso con <code>python herramientas/nuevo_caso.py</code> y llena la entrada.</li>
+        <li>Abre la carpeta con esa herramienta. En Claude Code y OpenCode escribe <code>@01-observador-caeiro</code>; en Codex, «Usa el agente 01-observador-caeiro».</li>
+      </ol>
+      <p>Guías: <a data-enlace="docs/guias/nivel-2-claude-code.md" href="#">Claude Code</a> ·
+      <a data-enlace="docs/guias/nivel-2-opencode.md" href="#">OpenCode</a> ·
+      <a data-enlace="docs/guias/nivel-2-codex.md" href="#">Codex</a> ·
+      <a data-enlace="docs/guias/problemas-frecuentes.md" href="#">Problemas frecuentes</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="calculadora">
+  <h2>Calculadora de plazos</h2>
+  <p>Días hábiles en Colombia para derechos de petición, fallo e impugnación de tutela, con los festivos de 2026 y 2027.
+  Da los mismos resultados que la herramienta del despacho.</p>
+  <p><a class="boton" href="calculadora.html">Abrir la calculadora</a></p>
+</section>
+
+</main>
+
+<footer class="ancho">
+  <p>Despacho Pessoa · Licencia MIT. Casos ficticios: nunca pegues en un chat gratuito datos reales de una persona.</p>
+</footer>
+
+<script src="assets/datos.js"></script>
+<script src="assets/pagina.js"></script>
+</body>
+</html>

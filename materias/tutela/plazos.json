@@ -1,0 +1,35 @@
+{
+  "_nota": "Reglas de plazo de la materia tutela. La calculadora actual tiene sus propios modos; este archivo documenta la configuración de la materia y servirá para el cálculo genérico. Verificar siempre la norma vigente.",
+  "modos": {
+    "peticion": {
+      "dias": 15,
+      "unidad": "habiles",
+      "base": "Art. 14 Ley 1755 de 2015 / Art. 16 Ley 1266 de 2008"
+    },
+    "peticion_docs": {
+      "dias": 10,
+      "unidad": "habiles",
+      "base": "Art. 14 num. 1 Ley 1755 de 2015"
+    },
+    "peticion_consulta": {
+      "dias": 30,
+      "unidad": "habiles",
+      "base": "Art. 14 num. 2 Ley 1755 de 2015"
+    },
+    "fallo_tutela": {
+      "dias": 10,
+      "unidad": "habiles",
+      "base": "Art. 86 CP / Art. 29 Decreto 2591 de 1991"
+    },
+    "impugnacion": {
+      "dias": 3,
+      "unidad": "habiles",
+      "base": "Art. 31 Decreto 2591 de 1991"
+    },
+    "cumplimiento_48h": {
+      "horas": 48,
+      "unidad": "horas",
+      "base": "Art. 27 Decreto 2591 de 1991"
+    }
+  }
+}

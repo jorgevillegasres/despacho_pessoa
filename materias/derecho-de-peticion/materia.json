@@ -1,0 +1,11 @@
+{
+  "id": "derecho-de-peticion",
+  "nombre": "Derecho de petición",
+  "descripcion": "Escrito de petición ante una autoridad o un particular (EPS, empleador, entidad financiera, operador de datos). Suele ser el paso previo a una tutela.",
+  "tipo_documento": "derecho de petición",
+  "plantilla": "materias/derecho-de-peticion/plantillas/modelo-derecho-de-peticion.md",
+  "checklist": "materias/derecho-de-peticion/checklist.md",
+  "plazos": "materias/derecho-de-peticion/plazos.json",
+  "corpus_por_defecto": ["fuentes/00_transversal"],
+  "salida": "borrador.md"
+}
