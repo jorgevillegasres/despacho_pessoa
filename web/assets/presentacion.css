@@ -95,7 +95,7 @@ body.scrolled .topbar, body.bar-closed .topbar { transform: translateY(-100%); }
 body.scrolled .nav, body.bar-closed .nav { top: 0; }
 .nav .logo {
   display: flex; align-items: center; gap: 10px; padding-left: 16px; text-decoration: none;
-  font-size: 15px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+  font-size: 15px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap;
 }
 .nav .logo svg { width: 27px; height: 27px; flex: none; }
 .nav .menu { display: flex; gap: 1.6rem; justify-content: center; }
@@ -445,7 +445,10 @@ footer.pie-final { position: relative; z-index: 1; padding: 10vh 16px; text-alig
   .nav { grid-template-columns: 1fr auto; }
   .nav .menu, .nav .pad { display: none; }
   .rail { display: none; }
-  .topbar { font-size: 10px; padding-right: 36px; }
+  .topbar { font-size: 10px; padding-right: 36px; justify-content: flex-start; }
+  .topbar span { overflow: hidden; text-overflow: ellipsis; }
+  .nav .logo { font-size: 13px; }
+  .btn-outline { padding: 0 9px; font-size: 10px; }
   .slide { padding-left: 16px; padding-right: 16px; }
   .slide h2 { max-width: none; }
   #inicio .inner { min-height: auto; padding-bottom: 40px; }
