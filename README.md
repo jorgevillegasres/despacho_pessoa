@@ -53,7 +53,7 @@ Cada agente tiene un oficio, unos límites y una forma conocida de equivocarse. 
 | **Modo local** con OpenCode | Windows, macOS o Linux | [OpenCode](docs/guias/nivel-2-opencode.md) |
 | **Modo local** con Codex | Windows, macOS o Linux | [Codex](docs/guias/nivel-2-codex.md) |
 | **Calcular un plazo** | Nada; funciona en el navegador | [Calculadora](web/calculadora.html) |
-| **Ver la conferencia** | Nada; funciona en el navegador | [Presentación](web/presentacion.html) |
+| **Ver la conferencia** | Nada; funciona en el navegador | [Presentación](web/presentacion.html) · [en línea](https://jorgevillegasres.github.io/despacho_pessoa/presentacion.html) |
 | **Resolver un error** | — | [Problemas frecuentes](docs/guias/problemas-frecuentes.md) |
 
 ## El flujo del despacho

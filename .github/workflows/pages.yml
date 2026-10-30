@@ -19,9 +19,9 @@ jobs:
       url: ${{ steps.despliegue.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # Requiere activar GitHub Pages una vez, a mano: Settings > Pages > Source: GitHub Actions.
+      # El token del flujo no tiene permiso para crear el sitio por sí mismo.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true  # activa GitHub Pages (origen: Actions) la primera vez
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
