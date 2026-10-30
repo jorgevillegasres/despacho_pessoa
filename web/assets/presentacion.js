@@ -74,6 +74,7 @@
   let actual = 0;
   const progreso = document.querySelector(".progress");
   const menuLinks = [...document.querySelectorAll(".nav .menu a")];
+  let listo = false; // hasta que el navegador haya saltado al #ancla inicial, no se reescribe la URL
   function marcar(i) {
     actual = i;
     const s = slides[i];
@@ -82,7 +83,7 @@
     if (labelBox) labelBox.style.top = (slides.length > 1 ? (i / (slides.length - 1)) * 100 : 0) + "%";
     if (progreso) progreso.style.width = ((i + 1) / slides.length) * 100 + "%";
     menuLinks.forEach((a) => a.setAttribute("aria-current", String(a.dataset.parte === s.dataset.parte)));
-    if (history.replaceState && s.id) history.replaceState(null, "", "#" + s.id);
+    if (listo && history.replaceState && s.id) history.replaceState(null, "", "#" + s.id);
   }
   const ioActual = new IntersectionObserver((entradas) => {
     entradas.forEach((e) => { if (e.isIntersecting) marcar(slides.indexOf(e.target)); });
@@ -94,7 +95,8 @@
 
   function irA(i) {
     i = Math.max(0, Math.min(slides.length - 1, i));
-    slides[i].scrollIntoView({ behavior: "smooth", block: "start" });
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    slides[i].scrollIntoView({ behavior: reduce ? "instant" : "smooth", block: "start" });
   }
 
   // Teclado: flechas, espacio, inicio, fin, F para pantalla completa, I para el índice.
@@ -195,9 +197,13 @@
     q.textContent = datos[0].texto; q.lang = datos[0].lang || "es"; who.textContent = datos[0].quien;
   }
 
-  // Si la página se abre con #ancla, deja esa sección marcada.
-  if (location.hash) {
-    const i = slides.findIndex((s) => "#" + s.id === location.hash);
-    if (i >= 0) setTimeout(() => marcar(i), 50);
+  // Si la página se abre con #ancla, salta a esa sección sin animación una vez cargada;
+  // antes de eso el carril no toca la URL, para que el navegador no acabe en la portada.
+  const inicial = location.hash ? slides.findIndex((s) => "#" + s.id === location.hash) : -1;
+  function saltarInicial() {
+    if (inicial >= 0) { slides[inicial].scrollIntoView({ behavior: "instant", block: "start" }); marcar(inicial); }
+    listo = true;
   }
+  if (document.readyState === "complete") setTimeout(saltarInicial, 60);
+  else window.addEventListener("load", () => setTimeout(saltarInicial, 60));
 })();
