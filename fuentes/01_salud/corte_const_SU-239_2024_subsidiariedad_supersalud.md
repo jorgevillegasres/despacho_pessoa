@@ -5,7 +5,7 @@
 - **Enlace Oficial de Referencia:** `https://gmhlex.com.co/documentos/constitucional/providencia/SU239-24_-_Derechos_A_La_Salud__A_La_Dignidad_Humana_Y_Libre_Desarrollo.pdf`
 - **Tipo de contenido:** extracto
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Fragmentos tal como los devolvió el índice de jurisprudencia del conector GMH LEX el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa el conector; no se afirma el día.
+- **Estado de Verificación:** Fragmentos tal como los devolvió la base indexada de jurisprudencia consultada el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa esa base; no se afirma el día.
 - **Para qué sirve en el despacho:** es la cita de la subsidiariedad en una tutela de salud. Reitera la SU-508 de 2020, que ya está en esta carpeta. Campos debe preguntarse si el caso concreto añade razones propias (urgencia clínica, sujeto de especial protección) y no solo esta regla general.
 
 ---

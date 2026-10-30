@@ -5,7 +5,7 @@
 - **Enlace Oficial de Referencia:** `https://www.suin-juriscol.gov.co/viewDocument.asp?id=1470723`
 - **Tipo de contenido:** literal
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Texto traído con la herramienta `obtener_articulo` del conector GMH LEX, que reensambla el artículo completo desde la norma indexada (fuente SUIN-Juriscol). Cotejo letra por letra contra el Diario Oficial pendiente (Consulta registrada). En la copia de SUIN el inciso tercero del artículo 7 dice «como con secuencia», error de digitalización; aquí se escribe «consecuencia». Complementa `decreto_2591_de_1991.md`, que trae el artículo 42 solo en sus numerales 2, 4, 6 y 9.
+- **Estado de Verificación:** Texto reensamblado, artículo por artículo, desde la norma indexada en una base de normas consultada en línea el 2026-10-29 (fuente SUIN-Juriscol). Cotejo letra por letra contra el Diario Oficial pendiente (Consulta registrada). En la copia de SUIN el inciso tercero del artículo 7 dice «como con secuencia», error de digitalización; aquí se escribe «consecuencia». Complementa `decreto_2591_de_1991.md`, que trae el artículo 42 solo en sus numerales 2, 4, 6 y 9.
 
 ---
 

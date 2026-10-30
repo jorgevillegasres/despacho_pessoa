@@ -5,7 +5,7 @@
 - **Enlace Oficial de Referencia:** T-360 de 2022 `https://gmhlex.com.co/documentos/constitucional/providencia/T-360-22_-_Derecho_Al_Buen_Nombre_Y_Al_Habeas_Data_En_Caso.pdf` · T-184 de 2023 `https://gmhlex.com.co/documentos/constitucional/modelo/T-184-23_-_Derecho_De_Peticion_En_Actuaciones_Judicialesprevalencia_Reglas_Del_Proceso.pdf` · T-584 de 2023 `https://gmhlex.com.co/documentos/constitucional/providencia/T-584-23_-_Derechos_Al_Buen_Nombre__A_La_Honra__La_Intimidad.pdf` · T-208 de 2026 `https://gmhlex.com.co/documentos/constitucional/providencia/T-208-26_-_derecho_al_habeas_data.pdf`
 - **Tipo de contenido:** extracto
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Fragmentos tal como los devolvió el índice de jurisprudencia del conector GMH LEX el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa el conector; no se afirma el día.
+- **Estado de Verificación:** Fragmentos tal como los devolvió la base indexada de jurisprudencia consultada el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa esa base; no se afirma el día.
 - **Para qué sirve en el despacho:** acompaña a `ley_1266_de_2008_y_ley_2157_2021.md`. Sirve para la materia de reportes negativos y para contrastar la tesis del archivo `DISTRACTOR-corte_const_SU-datos_notificacion_previa.md`.
 
 ---

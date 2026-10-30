@@ -92,7 +92,7 @@ La biblioteca jurídica está en `fuentes/`. Es un **corpus cerrado**: los agent
 - `fuentes/02_laboral/`: trabajo y estabilidad ocupacional.
 - `fuentes/03_habeas_data/`: habeas data y reportes negativos.
 
-Parte de la biblioteca se trajo con el conector **GMH LEX** (base de jurisprudencia y normas colombianas): esos archivos conservan el enlace al PDF de cada providencia o a la norma indexada, declaran la fecha de consulta y quedan en estado `Consulta registrada` hasta que alguien los coteje contra el sitio oficial. El catálogo dice cuáles son.
+Parte de la biblioteca se trajo de una base indexada de jurisprudencia y normas colombianas: esos archivos conservan el enlace al PDF de cada providencia o a la norma indexada, declaran la fecha de consulta y quedan en estado `Consulta registrada` hasta que alguien los coteje contra el sitio oficial. El catálogo dice cuáles son.
 
 `fuentes/SELLO.json` guarda la huella SHA-256 de cada archivo. Antes y después de trabajar:
 

@@ -5,8 +5,8 @@
 - **Enlace Oficial de Referencia:** `https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=259639#sp61` y `https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=259639#sp63`
 - **Tipo de contenido:** literal
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Texto traído con la herramienta `obtener_articulo` del conector GMH LEX, que reensambla el artículo completo desde la norma indexada (fuente: gestor normativo de Función Pública). Cotejo letra por letra contra el Diario Oficial pendiente (Consulta registrada).
-- **Nota de vigencia (según el conector GMH LEX; el artículo de transición no está cotejado en este corpus):** la Ley 2452 de 2025 rige los procesos laborales iniciados desde el 2 de abril de 2026; los iniciados antes siguen con el Decreto 2158 de 1948. Antes de afirmar que una norma del código anterior no rige, hay que preguntar cuándo se radicó la demanda. La plantilla `materias/demanda-laboral/` debe seguir estos dos artículos.
+- **Estado de Verificación:** Texto reensamblado, artículo por artículo, desde la norma indexada en una base de normas consultada en línea el 2026-10-29 (fuente: gestor normativo de Función Pública). Cotejo letra por letra contra el Diario Oficial pendiente (Consulta registrada).
+- **Nota de vigencia (según la base consultada; el artículo de transición no está cotejado en este corpus):** la Ley 2452 de 2025 rige los procesos laborales iniciados desde el 2 de abril de 2026; los iniciados antes siguen con el Decreto 2158 de 1948. Antes de afirmar que una norma del código anterior no rige, hay que preguntar cuándo se radicó la demanda. La plantilla `materias/demanda-laboral/` debe seguir estos dos artículos.
 
 ---
 

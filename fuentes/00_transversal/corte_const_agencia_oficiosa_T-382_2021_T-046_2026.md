@@ -5,7 +5,7 @@
 - **Enlace Oficial de Referencia:** T-382 de 2021 `https://gmhlex.com.co/documentos/constitucional/providencia/T-382-21_-_Salud_____Al_Hoy_Interno_Carlos_Eder_Zapata_Banguero.pdf` · T-046 de 2026 `https://gmhlex.com.co/documentos/constitucional/providencia/T-046-26_-_Tutela_contra_providencia_judicial.pdf` · T-188 de 2026 `https://gmhlex.com.co/documentos/constitucional/providencia/T-188-26_-_Acceso_Al_Agua_Potable_Y_Garantia_Del_Consumo_Minimo_Frente_A_La_Suspension.pdf`
 - **Tipo de contenido:** extracto
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Fragmentos tal como los devolvió el índice de jurisprudencia del conector GMH LEX el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa el conector; no se afirma el día.
+- **Estado de Verificación:** Fragmentos tal como los devolvió la base indexada de jurisprudencia consultada el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa esa base; no se afirma el día.
 - **Para qué sirve en el despacho:** cuando la tutela la presenta un familiar o un tercero por el titular (el caso típico de salud con un paciente postrado). Caeiro debe dejar constancia de qué prueba acredita la imposibilidad del titular; si no hay ninguna, `NO CONSTA`.
 
 ---

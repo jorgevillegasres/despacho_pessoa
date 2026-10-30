@@ -1,6 +1,6 @@
 # Checklist — Derecho de petición
 
-> **Uso:** lista de control para el Redactor y el Verificador. No sustituye la revisión del abogado. Verifica la norma vigente y el caso concreto. Los puntos marcados «verificar» vienen del método de redacción consultado en GMH LEX y señalan reglas cuyo artículo todavía no está en el corpus: no se citan hasta incorporarlo.
+> **Uso:** lista de control para el Redactor y el Verificador. No sustituye la revisión del abogado. Verifica la norma vigente y el caso concreto. Los puntos marcados «verificar» vienen del método de redacción consultado el 29 de octubre de 2026 y señalan reglas cuyo artículo todavía no está en el corpus: no se citan hasta incorporarlo.
 
 ## 1. Destinatario y modalidad
 

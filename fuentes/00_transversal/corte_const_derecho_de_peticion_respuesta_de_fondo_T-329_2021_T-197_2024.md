@@ -5,7 +5,7 @@
 - **Enlace Oficial de Referencia:** T-329 de 2021 `https://gmhlex.com.co/documentos/constitucional/modelo/T-329-21_-_Derecho_De_Peticion_De_Informacion.pdf` · T-337 de 2023 `https://gmhlex.com.co/documentos/constitucional/providencia/T-337-23_-_Servicio_De_Energia_Electrica_Como_Condicion_Del_Derecho_A_La_Vivienda_Digna.pdf` · T-197 de 2024 `https://gmhlex.com.co/documentos/constitucional/modelo/T-197-24_-_Derecho_De_Peticion_En_Revocatoria_Directa_De_Acto.pdf` · T-487 de 2025 `https://gmhlex.com.co/documentos/laboral/providencia/T-487-25_-_Derecho_A_La_Salud__A_La_Vida_Digna__A_La_Seguridad_Social.pdf`
 - **Tipo de contenido:** extracto
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Fragmentos tal como los devolvió el índice de jurisprudencia del conector GMH LEX el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa el conector; no se afirma el día.
+- **Estado de Verificación:** Fragmentos tal como los devolvió la base indexada de jurisprudencia consultada el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa esa base; no se afirma el día.
 - **Para qué sirve en el despacho:** el caso de ejemplo arranca con una petición a la EPS. Estas reglas dicen qué cuenta como respuesta y qué no; el plazo se cuenta con la calculadora (Regla 5), nunca aquí.
 
 ---

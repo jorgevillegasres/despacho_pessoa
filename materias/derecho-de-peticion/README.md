@@ -11,7 +11,7 @@ Escrito de petición ante una autoridad o un particular. En el despacho suele se
 
 ## Lo que hay que saber antes de usarla
 
-- La estructura y las reglas de redacción (una petición por punto, modalidad desde la primera línea, término en sección propia, anexos siempre, advertencia de tutela como última línea) vienen del método de redacción consultado en el conector GMH LEX el 29 de octubre de 2026.
+- La estructura y las reglas de redacción (una petición por punto, modalidad desde la primera línea, término en sección propia, anexos siempre, advertencia de tutela como última línea) vienen de un método de redacción consultado el 29 de octubre de 2026.
 - Solo se citan las normas que están en el corpus: artículo 23 de la Constitución y artículos 13, 14 y 32 de la Ley 1755 de 2015, más la jurisprudencia sobre respuesta de fondo. Las reglas marcadas «verificar» en la checklist tienen artículo en la ley pero todavía no están copiadas en `fuentes/`: incorporarlas antes de citarlas.
 - El plazo se calcula con la herramienta. Si la petición ya se radicó, la fecha de radicación es un hecho probado y la calculadora dice cuándo vence.
 

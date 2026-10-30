@@ -44,7 +44,7 @@
 - [ ] Cuantía: basta indicar si supera o no los cuarenta (40) SMLMV cuando sea necesaria para la competencia o el trámite.
 - [ ] Canal digital de notificación de partes, apoderados, testigos, peritos y terceros, so pena de inadmisión (o manifestación bajo juramento de que se desconoce).
 - [ ] Anexos del art. 63: poder, documento de identificación del demandante, pruebas documentales y extraprocesales, y prueba de existencia y representación legal (o la afirmación bajo juramento de que no fue posible obtenerla).
-- [ ] Si el reintegro se funda en un fuero o en estabilidad reforzada, el método consultado en GMH LEX remite a un proceso especial de la misma ley con prescripción propia: verificar los artículos en la fuente oficial e incorporarlos al corpus antes de citarlos.
+- [ ] Si el reintegro se funda en un fuero o en estabilidad reforzada, el método de redacción consultado remite a un proceso especial de la misma ley con prescripción propia: verificar los artículos en la fuente oficial e incorporarlos al corpus antes de citarlos.
 
 ## 5. Escrito
 

@@ -5,7 +5,7 @@
 - **Enlace Oficial de Referencia:** SL1588-2022 `https://gmhlex.com.co/documentos/laboral/providencia/SL1588-2022_-_sancion_moratoria_por_cesantias.pdf` · SL2746-2022 `https://gmhlex.com.co/documentos/laboral/providencia/SL2746-2022_-_sancion_moratoria_por_cesantias.pdf` · SL502-2023 `https://gmhlex.com.co/documentos/laboral/providencia/SL502-2023_-_pension_de_sobrevivientes.pdf`
 - **Tipo de contenido:** extracto
 - **Fecha de consulta de la fuente oficial:** 2026-10-29
-- **Estado de Verificación:** Fragmentos tal como los devolvió el índice de jurisprudencia del conector GMH LEX el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa el conector; no se afirma el día.
+- **Estado de Verificación:** Fragmentos tal como los devolvió la base indexada de jurisprudencia consultada el 2026-10-29 (se unieron los saltos de línea de la extracción del PDF; no se cambió ninguna palabra). Cotejo letra por letra contra la relatoría oficial pendiente: estado «Consulta registrada». El año de cada providencia es el que informa esa base; no se afirma el día.
 - **Para qué sirve en el despacho:** acompaña a `cst_arts_22_23_24_contrato_realidad.md`. Dice qué debe probar el trabajador y qué debe desvirtuar el empleador. Es jurisprudencia de la Sala Laboral, no de la Corte Constitucional: se cita con el radicado SL.
 
 ---

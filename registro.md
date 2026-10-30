@@ -33,15 +33,29 @@ Esta tabla empieza vacía. Añade una fila por cada ejecución o pega un «Asien
 ```
 
 ### Asiento de Auditoría - Biblioteca (corpus) - 2026-10-29
-- **Agente / Herramienta:** Socio Director, con el conector GMH LEX (buscar_jurisprudencia, buscar_normas, obtener_articulo, metodo_gmh) y `herramientas/verificar_corpus.py --sellar`.
-- **Archivos de entrada:** resultados del conector GMH LEX del 2026-10-29 (fragmentos de providencias con enlace al PDF; artículos 7 y 42 del Decreto 2591 de 1991; artículos 61 y 63 de la Ley 2452 de 2025).
+- **Agente / Herramienta:** Socio Director, con una base indexada de jurisprudencia y normas consultada en línea y `herramientas/verificar_corpus.py --sellar`.
+- **Archivos de entrada:** resultados de esa base del 2026-10-29 (fragmentos de providencias con enlace al PDF; artículos 7 y 42 del Decreto 2591 de 1991; artículos 61 y 63 de la Ley 2452 de 2025).
 - **Archivo de salida:** diez archivos nuevos en `fuentes/` (cuatro en `00_transversal/`, dos en `01_salud/`, tres en `02_laboral/`, uno en `03_habeas_data/`), diez filas nuevas en `fuentes/00-indice.md` y nuevo `fuentes/SELLO.json` (26 archivos).
 - **Verificación de Reglas del Estatuto:**
-  - [x] ¿Respetó el corpus cerrado `fuentes/`? Las fuentes nuevas traen solo texto devuelto por el conector, con su enlace; nada de memoria.
+  - [x] ¿Respetó el corpus cerrado `fuentes/`? Las fuentes nuevas traen solo texto devuelto por esa base, con su enlace; nada de memoria.
   - [x] ¿Marcó `NO CONSTA` ante vacíos probatorios? No aplica (no es un caso).
   - [x] ¿Usó `calcular_plazos.py` para conteo de términos? No aplica.
   - [x] ¿`verificar_corpus.py --comprobar` dio «intacto» antes y después? Sí: 16 archivos antes, 26 después del nuevo sello.
   - [ ] ¿`verificar_citas.py` aprobó el borrador? No aplica.
   - [ ] Leyó `informe-verificacion.md` e `informe-riesgo.md` completos (Regla 6). No aplica.
 - **Decisión del Socio Director:** [PENDIENTE DE FIRMA] Las diez fuentes quedan en estado «Consulta registrada»: el cotejo letra por letra contra el sitio oficial sigue pendiente.
+- **Observaciones del Socio Director:**
+
+### Asiento de Auditoría - Biblioteca (corpus) - 2026-10-29 (segundo)
+- **Agente / Herramienta:** Socio Director, con `herramientas/verificar_corpus.py --sellar`.
+- **Archivos de entrada:** las diez fuentes añadidas ese mismo día y `fuentes/00-indice.md`.
+- **Archivo de salida:** las mismas diez fuentes y el catálogo, con la línea «Estado de Verificación» y la nota de procedencia reescritas para describir la base indexada de la que salieron sin nombrar la herramienta; nuevo `fuentes/SELLO.json` (26 archivos). No se tocó ningún fragmento citado, ningún enlace ni ninguna fecha de consulta.
+- **Verificación de Reglas del Estatuto:**
+  - [x] ¿Respetó el corpus cerrado `fuentes/`? Sí: solo cambió la cabecera de procedencia; el texto citable es el mismo.
+  - [x] ¿Marcó `NO CONSTA` ante vacíos probatorios? No aplica.
+  - [x] ¿Usó `calcular_plazos.py` para conteo de términos? No aplica.
+  - [x] ¿`verificar_corpus.py --comprobar` dio «intacto» antes y después? Sí: 26 archivos antes y después del nuevo sello.
+  - [ ] ¿`verificar_citas.py` aprobó el borrador? No aplica.
+  - [ ] Leyó `informe-verificacion.md` e `informe-riesgo.md` completos (Regla 6). No aplica.
+- **Decisión del Socio Director:** [PENDIENTE DE FIRMA] El estado «Consulta registrada» de las diez fuentes no cambia; el cotejo contra el sitio oficial sigue pendiente.
 - **Observaciones del Socio Director:**
